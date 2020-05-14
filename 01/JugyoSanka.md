@@ -33,7 +33,7 @@
 4.  **【重要】**講師が承認するとミーティングルームに入れます。Zoomの表示名を履修登録名簿（およびSlackの表示名）と一致させてください    
     * Zoomでアカウント名を設定・変更する方法
     1. 設定をクリック（またはZoomウェブサイトからサインイン）
-<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/ZoomMeetingImages/ZoomSetting.png")
+<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/ZoomMeetingImages/ZoomSetting.png">
     2. プロフィール→「編集」をクリック
 ![ZoomProfileSetting1](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/ZoomMeetingImages/ZoomProfileSettings.png)
     3. 姓名を入力・変更（プロフィール画像も変更できます）
