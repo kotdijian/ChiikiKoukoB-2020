@@ -220,6 +220,10 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.p
 * 大学学習資源コンソーシアム（ＣＬＲ） 
     * [大学学習資源における著作物の活用と著作権大学学習資源コンソーシアム（ＣＬＲ）](http://clr.jp/servicemenu/guideline_jpn.pdf)
 
+---
+###### 17
+## 著作権法35条の改正と令和2年度の特例  
+
 * [文化庁　著作権](https://www.bunka.go.jp/seisaku/chosakuken/index.html)
     * [著作権法の一部を改正する法律 概要](https://www.bunka.go.jp/seisaku/chosakuken/hokaisei/h30_hokaisei/pdf/r1406693_01.pdf)
 
@@ -228,8 +232,9 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.p
         * https://forum.sartras.or.jp/info/004/
         * https://forum.sartras.or.jp/wp-content/uploads/kongounyo.pdf
         * https://forum.sartras.or.jp/wp-content/uploads/unyoshishin2020.pdf
+
 ---
-###### 12
+###### 18
 ## 事後学習課題
 
 1. 地域研究資料をオンラインで検索する
@@ -238,4 +243,3 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.p
 4. 質問・相談はSlackへ
 
 ---
-
