@@ -62,7 +62,6 @@ layout: false
 ---
 ###### 4-2
 ## 考古学における地域研究1
-#### 分布論
 
 [![](https://raw.githubusercontent.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/type-region.png)](https://raw.githubusercontent.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/type-region.png) 
 (鈴木1988: 第11図)
@@ -86,9 +85,8 @@ right[(戸沢1986：図1)]
 ###### 6
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
-[![太郎良2019図1](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019fig1.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019fig1.png)   
+[![太郎良2019図1](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019fig1.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019fig1.png) 
 [![太郎良2019図7-8](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs7-8.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs7-8.png)    
-
 
 ---
 ###### 6
