@@ -131,10 +131,99 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.p
 
 ---
 ###### 10
-## 考古学における地域研研究3
+## 考古学における地域研究3
 #### 景観論
 
 * 歴史地理学
     * [『地形からみた歴史』](https://bookclub.kodansha.co.jp/product?item=0000211623)  
-https://cv.bkmkn.kodansha.co.jp/9784062921435/9784062921435_w.jpg
-![日下1991](https://cv.bkmkn.kodansha.co.jp/9784062921435/9784062921435_w.jpg, width=50%)
+
+* 環境考古学  
+
+* 景観考古学
+    * [『景観考古学の方法と実践』](http://www.douseisha.co.jp/book/b245310.html)
+
+---
+###### 11
+## 考古学における地域研究+
+#### 理論研究：考古学における地域とはなにか?
+
+* 集団・社会ネットワーク
+
+* 中心と周縁
+
+* 民俗知・民族知と生活空間認識
+
+---
+###### 12
+## ちょっと休憩
+#### どんな地域研究をやってみたいですか?
+
+---
+###### 13
+## 考古学における地域研究の方法
+
+* テーマの設定：地域、対象資料
+
+* 資料の探索・収集
+
+* 地図・分布図の作成
+
+---
+###### 14
+## 地域資料をどのように調べることができるか
+
+* [図書館](http://library.u-gakugei.ac.jp/)
+    * [OPAC](https://library.u-gakugei.ac.jp/opac/complexsearch)
+
+* [全国遺跡報告総覧](https://sitereports.nabunken.go.jp/ja)
+
+* [国立情報学研究所 CiNii Books](https://ci.nii.ac.jp/books/)
+
+* [国立国会図書館サーチ](https://iss.ndl.go.jp/)
+
+* [国立科学振興機構 J-STAGE](https://www.jstage.jst.go.jp/browse/-char/ja/)
+
+* [TRC-ADEAC](https://trc-adeac.trc.co.jp/)
+
+* [機関リポジトリ](https://library.u-gakugei.ac.jp/etopia/top.html)
+
+---
+###### 15
+## 2020年5月「今」の状況を考える
+
+* [「図書館休館で「論文が間に合わない」 コロナ禍の「若手研究者」に降りかかる困難」弁護士ドットコムニュース(2020/5/14)](https://www.bengo4.com/c_23/n_11216/)  
+
+* [東大図書館休館問題を考える有志ウェブサイト](https://utclosedlib2020.wixsite.com/website)
+
+---
+###### 16
+## 著作物の利用と著作権法
+
+* [CRIC（公益社団法人著作権情報センター）](https://www.cric.or.jp/index.html)  
+    * [著作物が自由に使える場合は?](https://www.cric.or.jp/qa/hajime/hajime7.html)
+
+* [JRRC（公益社団法人日本複製権センター）](https://jrrc.or.jp/)  
+    * [13．学校の授業で書籍などから複写して教材として使用することはできますか？](http://www.jbpa.or.jp/pdf/guideline/act_article35_guideline.pdf)  
+
+* 大学学習資源コンソーシアム（ＣＬＲ） 
+    * [大学学習資源における著作物の活用と著作権大学学習資源コンソーシアム（ＣＬＲ）](http://clr.jp/servicemenu/guideline_jpn.pdf)
+
+* [文化庁　著作権](https://www.bunka.go.jp/seisaku/chosakuken/index.html)
+    * [著作権法の一部を改正する法律 概要](https://www.bunka.go.jp/seisaku/chosakuken/hokaisei/h30_hokaisei/pdf/r1406693_01.pdf)
+
+* [著作物の教育利用に関する関係者フォーラム](https://forum.sartras.or.jp/info/004/)
+    * 「改正著作権法第３５条運用指針（令和２（2020）年度版）」を公表    
+        * https://forum.sartras.or.jp/info/004/
+        * https://forum.sartras.or.jp/wp-content/uploads/kongounyo.pdf
+        * https://forum.sartras.or.jp/wp-content/uploads/unyoshishin2020.pdf
+---
+###### 12
+## 事後学習課題
+
+1. 地域研究資料をオンラインで検索する
+2. Googleスプレッドシートで一覧表を作成する（テンプレートあり）
+3. テーマは授業中に考えたものでも良いし、変更しても良い
+4. 質問・相談はSlackへ
+
+---
+
