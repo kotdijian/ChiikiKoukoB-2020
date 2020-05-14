@@ -5,7 +5,7 @@ class: center, middle, inverse
 ---
 # 考古学における地域研究 
 地域考古学B-2020年度第2回目
-[![](https://c8r-x0.s3.amazonaws.com/lab-components-macbook.jpg)](https://c8r-x0.s3.amazonaws.com/lab-components-macbook.jpg)
+[![]()](https://c8r-x0.s3.amazonaws.com/lab-components-macbook.jpg)
 
 ---
 layout: false
