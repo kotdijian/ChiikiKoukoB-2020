@@ -35,7 +35,7 @@
     1. 設定をクリック（またはZoomウェブサイトからサインイン）
 [![](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomSetting.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomSetting.png)
     2. プロフィール→「編集」をクリック
-<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSettings.png" alt="">
+[![](https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSettings.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSettings.png)
     3. 姓名を入力・変更（プロフィール画像も変更できます）
 <img src="https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSetting2.png" alt="">
     4. ミーティング画面からも変更可能
