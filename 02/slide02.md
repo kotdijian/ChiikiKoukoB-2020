@@ -59,7 +59,9 @@ layout: false
 >型式は時間的にある限られた範囲に存在するととも間的領域に分布する。これを型式の分布圏と呼ぶ。 個々の型式はそれぞれの固有の分布圏を持つが， これは，その型式を作り出し，用いた一群の人々――人間集団――の活動した空間的範囲を示す証拠として重要なデータとなるものである。 (鈴木1988:67-68) 
 
 https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png
-![型式と分布]https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png  
+![型式と分布](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png)
+https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png
+![土器型式と石器組成](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/pottery-lithic.png)
 
 ---
 ###### 5
@@ -78,9 +80,9 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.p
 ###### 6
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
-https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png
+https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png  
 ![太郎良2019図1](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png)   
-https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png
+https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png  
 ![太郎良2019図7-8](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png)    
 
 
@@ -104,8 +106,8 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig
 
 ---
 ###### 8
-## 考古学における地域研究」2
-#### 地域史の代表例  
+## 考古学における地域研究2
+#### 地域史の例  
 
 **自治体史（都道府県・市町村史）**
 * ある自治体の範囲の歴史（および関連分野）を網羅する
@@ -115,3 +117,8 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig
         * 中世・近世・近代（文献史学中心）  
 
 ---
+###### 9
+## 考古学における地域研究2  
+#### 考古学における「地域史」  
+
+
