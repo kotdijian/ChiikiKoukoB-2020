@@ -1,9 +1,11 @@
 name: inverse
 layout: true
 class: center, middle, inverse
+
 ---
 # 考古学における地域研究 
 地域考古学B-2020年度第2回目
+
 ---
 layout: false
 ###### 1
@@ -41,7 +43,8 @@ layout: false
 
 ** 考古学における「地域」の実例を考えてみよう**
 
-* 地域の示標は何か?
+* 地域の示標は何か?    
+
 .left-column[* 考古学以外の要素が主／考古学の要素が従]
     
 .right-column[* 考古学の要素が主／考古学以外の要素が従]
@@ -55,7 +58,8 @@ layout: false
 >型式と分布圏    
 >型式は時間的にある限られた範囲に存在するととも間的領域に分布する。これを型式の分布圏と呼ぶ。 個々の型式はそれぞれの固有の分布圏を持つが， これは，その型式を作り出し，用いた一群の人々――人間集団――の活動した空間的範囲を示す証拠として重要なデータとなるものである。 (鈴木1988:67-68) 
 
-<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png">    
+<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png">  
+https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png  
 
 ---
 ###### 5
@@ -74,7 +78,40 @@ layout: false
 ###### 6
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
-<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png">    
+<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png">   
+![太郎良2019図1](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png)   
 <img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png">    
+![太郎良2019図7-8](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png)    
+
+
+---
+###### 6
+## 考古学における地域研究1
+#### 構成要素の分布とは?    
+<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png">    
+![太郎良2019図4-5](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png)   
+
+---
+###### 7
+## 考古学における地域研究2
+#### 考古学の要素が従：「地域史」研究
+
+**地域史とは?**
+* 一定の「地域」の歴史、「郷土史」とも <> 「日本史」や「世界史」と対比される  
+* 「地域」の範囲は地理的、歴史的、文化的に設定される  
+* 設定された範囲における時期・時代を越えた通史的な研究   
+* 複数・多数の要素（遺物・遺構等）を取り扱う  
+
+---
+###### 8
+## 考古学における地域研究」2
+#### 地域史の代表例  
+
+**自治体史（都道府県・市町村史）**
+* ある自治体の範囲の歴史（および関連分野）を網羅する
+    * 例）『新修港区史』[ADEAC デジタル版港区のあゆみ](https://trc-adeac.trc.co.jp/WJ11D0/WJJS05U/1310305100/1310305100100010?dtl=all)  
+        * 地形（地質）・環境  
+        * 原始・古代（考古学中心）  
+        * 中世・近世・近代（文献史学中心）  
 
 ---
