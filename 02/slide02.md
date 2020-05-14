@@ -60,10 +60,10 @@ layout: false
 >型式は時間的にある限られた範囲に存在するととも間的領域に分布する。これを型式の分布圏と呼ぶ。 個々の型式はそれぞれの固有の分布圏を持つが， これは，その型式を作り出し，用いた一群の人々――人間集団――の活動した空間的範囲を示す証拠として重要なデータとなるものである。 (鈴木1988:67-68) 
 
 [![](https://raw.githubusercontent.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/type-region.png)](https://raw.githubusercontent.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/type-region.png)   
-https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/type-region.png  
+https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/type-region.png  raw.
 (鈴木1988: 第11図)
-[![](https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/pottery-lithic.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/pottery-lithic.png)  
-https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/pottery-lithic.png  
+[![](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/pottery-lithic.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/pottery-lithic.png)  
+https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/pottery-lithic.png  
 right[(戸沢1986：図1)]
 
 ---
@@ -83,18 +83,18 @@ right[(戸沢1986：図1)]
 ###### 6
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
-https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019fig1.png  
-[![太郎良2019図1](https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019fig1.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019fig1.png)   
-https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs7-8.png  
-[![太郎良2019図7-8](https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs7-8.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs7-8.png)    
+https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019fig1.png  
+[![太郎良2019図1](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019fig1.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019fig1.png)   
+https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs7-8.png  
+[![太郎良2019図7-8](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs7-8.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs7-8.png)    
 
 
 ---
 ###### 6
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
-https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs4-5.png
-[![太郎良2019図4-5](https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs4-5.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs4-5.png)   
+https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs4-5.png
+[![太郎良2019図4-5](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs4-5.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs4-5.png)   
 
 ---
 ###### 7
@@ -125,8 +125,8 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs4-5.
 #### 考古学における「地域史」  
 
 *　ある地域における遺跡・遺物分布の時間的変遷  
-https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/yatsugatake.png
-[![原村誌](https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/yatsugatake.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/yatsugatake.png)   
+https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/yatsugatake.png
+[![原村誌](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/yatsugatake.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/yatsugatake.png)   
 
 ---
 ###### 10
