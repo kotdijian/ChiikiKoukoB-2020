@@ -61,8 +61,10 @@ layout: false
 
 https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png
 ![型式と分布](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png)  
+(鈴木1988: 第11図)
 https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/pottery-lithic.png
-![土器型式と石器組成](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/pottery-lithic.png)
+![土器型式と石器組成](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/pottery-lithic.png)  
+right[(戸沢1986：図1)]
 
 ---
 ###### 5
@@ -126,4 +128,7 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig
 https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.png
 ![太郎良2019図4-5](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.png)   
 
-
+---
+###### 10
+## 考古学における地域研研究3
+#### 
