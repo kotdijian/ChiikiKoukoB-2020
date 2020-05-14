@@ -2,9 +2,9 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
-# 考古学における地域研究
-
-***
+# 考古学における地域研究 
+地域考古学B-2020年度第2回目
+---
 layout:false
 ###### 1
 ## 今日のリソース
@@ -72,18 +72,3 @@ layout:false
 ![太郎良2019](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png)    
 
 ---
-.left-column[
-* [    
-]
-.right-column[
-* 右に書く
-]
-
----
-## スライド３
-### スライド３
-４ページ目
-
-* リンクを貼る
-
-__[Google](https://www.google.co.jp/)__
