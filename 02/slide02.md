@@ -5,8 +5,6 @@ class: center, middle, inverse
 ---
 # 考古学における地域研究 
 地域考古学B-2020年度第2回目
-[![](https://c8r-x0.s3.amazonaws.com/lab-components-macbook.jpg)](https://c8r-x0.s3.amazonaws.com/lab-components-macbook.jpg)
-
 ---
 layout: false
 ###### 1
@@ -64,8 +62,8 @@ layout: false
 [![](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png)   
 https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png  
 (鈴木1988: 第11図)
-https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/pottery-lithic.png
-![土器型式と石器組成](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/pottery-lithic.png)  
+[![](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/pottery-lithic.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/pottery-lithic.png)  
+https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/pottery-lithic.png  
 right[(戸沢1986：図1)]
 
 ---
@@ -86,9 +84,9 @@ right[(戸沢1986：図1)]
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
 https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png  
-![太郎良2019図1](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png)   
+[![太郎良2019図1](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png)   
 https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png  
-![太郎良2019図7-8](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png)    
+[![太郎良2019図7-8](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png)    
 
 
 ---
@@ -96,7 +94,7 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
 https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png
-![太郎良2019図4-5](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png)   
+[![太郎良2019図4-5](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png)   
 
 ---
 ###### 7
@@ -128,7 +126,7 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig
 
 *　ある地域における遺跡・遺物分布の時間的変遷  
 https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.png
-![原村誌](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.png)   
+[![原村誌](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.png)   
 
 ---
 ###### 10
