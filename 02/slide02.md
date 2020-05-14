@@ -170,7 +170,7 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.p
 
 ---
 ###### 14
-## 地域資料をどのように調べることができるか
+## 地域資料の調べ方
 
 * [図書館](http://library.u-gakugei.ac.jp/)
     * [OPAC](https://library.u-gakugei.ac.jp/opac/complexsearch)
@@ -190,6 +190,19 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.p
 ---
 ###### 15
 ## 2020年5月「今」の状況を考える
+* 調べる対象はどれだけあるのか?
+1. NDL Search：タイトル=考古学 AND 出版地=日本, データベース=国立国会図書館オンライン, 資料種別=本, 所蔵館=国立国会図書館 or 他機関  
+2. CiNii Books, タイトル=考古学, 資料種別=図書・雑誌, 言語種別=日本語  
+|年代|NDL Search|CiNii Books|
+|:--:|--:|--:|
+|～1950|283|430|
+|1951～1960|148|167|
+|1961～1970|186|250|
+|1971～1980|408|537|
+|1981～1990|631|820|
+|1991～2000|951|1469|
+|2001～2010|1696|1772|
+|2011～2020|1308|1243|
 
 * [「図書館休館で「論文が間に合わない」 コロナ禍の「若手研究者」に降りかかる困難」弁護士ドットコムニュース(2020/5/14)](https://www.bengo4.com/c_23/n_11216/)  
 
