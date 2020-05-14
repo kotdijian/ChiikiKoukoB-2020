@@ -102,7 +102,7 @@
 ### **5. 資料等を確認しよう**
 
 1. 講義資料は、**1.GoogleDrive** (リンクURLはSlack上で共有します)、または **[2.GitHub](https://github.com/kotdijian/ChiikiKoukoB-2020)
-![GitHub](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/ZoomMeetingImages/GitHubRepositry.png)** で提供します。
+<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/ZoomMeetingImages/GitHubRepositry.png>** で提供します。
 
 2. GoogleDriveは外部公開しませんので、リンクURLは公開したり、他人と共有しないようにしてください。    
 
