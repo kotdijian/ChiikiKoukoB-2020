@@ -65,10 +65,8 @@ layout: false
 #### 分布論
 
 [![](https://raw.githubusercontent.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/type-region.png)](https://raw.githubusercontent.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/type-region.png) 
-https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/type-region.png
-(鈴木1988: 第11図)  
+(鈴木1988: 第11図)
 [![](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/pottery-lithic.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/pottery-lithic.png)
-https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/pottery-lithic.png
 right[(戸沢1986：図1)]
 
 ---
