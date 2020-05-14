@@ -1,3 +1,7 @@
+name: inverse
+layout: true
+class: center, middle, inverse
+
 ---
 # 考古学における地域研究 
 地域考古学B-2020年度第2回目
