@@ -33,13 +33,13 @@
 4.  **【重要】**講師が承認するとミーティングルームに入れます。Zoomの表示名を履修登録名簿（およびSlackの表示名）と一致させてください    
     * Zoomでアカウント名を設定・変更する方法
     1. 設定をクリック（またはZoomウェブサイトからサインイン）
-<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/ZoomMeetingImages/ZoomSetting.png">
+<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/ZoomMeetingImages/ZoomSetting.png">    
     2. プロフィール→「編集」をクリック
-![ZoomProfileSetting1](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/ZoomMeetingImages/ZoomProfileSettings.png)
+<img src="ZoomProfileSetting1](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/ZoomMeetingImages/ZoomProfileSettings.png">
     3. 姓名を入力・変更（プロフィール画像も変更できます）
-![ZoomProfileSetting2](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/ZoomMeetingImages/ZoomProfileSetting2.png)
+<img src="ZoomProfileSetting2](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/ZoomMeetingImages/ZoomProfileSetting2.png">
     4. ミーティング画面からも変更可能
-![ZoomProfileSetting3](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/ZoomMeetingImages/ZoomProfileSetting3.png)
+<img src="ZoomProfileSetting3](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/ZoomMeetingImages/ZoomProfileSetting3.png">
     * **Zoomアカウントをほかでも使用していてプロフィールを変更したくない人は、*4*の方法で授業時間だけ表示名を変更してください**
 
 ***
@@ -95,7 +95,7 @@
 4. はじめのうちは、共同ノートへの記入事項などについて講師が適宜指示をしますが、慣れてきたらみなさんで自主的に記録を取ってみてください。
 
 5. ひとりひとりで記録・まとめを作成するだけでなく、**みんな協力・集合知で共同ノートを完成させましょう!!**
-![CollaboNoteTaking](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/ZoomMeetingImages/CollaboNoteTaking.png)
+<img src="CollaboNoteTaking](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/ZoomMeetingImages/CollaboNoteTaking.png">    
 
 ***
 ###### 5
