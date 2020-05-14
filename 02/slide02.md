@@ -5,7 +5,7 @@ class: center, middle, inverse
 # 考古学における地域研究 
 地域考古学B-2020年度第2回目
 ---
-layout:false
+layout: false
 ###### 1
 ## 今日のリソース
 
@@ -55,7 +55,7 @@ layout:false
 >型式と分布圏    
 >型式は時間的にある限られた範囲に存在するととも間的領域に分布する。これを型式の分布圏と呼ぶ。 個々の型式はそれぞれの固有の分布圏を持つが， これは，その型式を作り出し，用いた一群の人々――人間集団――の活動した空間的範囲を示す証拠として重要なデータとなるものである。 (鈴木1988:67-68) 
 
-![形式と分布](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png)    
+<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png">    
 
 ---
 ###### 5
@@ -65,10 +65,16 @@ layout:false
 **分布をみる単位は何か?**    
 
 * 遺物・遺構の形式・型式の組み合わせ・組成
+
 * 特徴的な遺物・遺構
+
 * 遺物・遺構の構成要素
 
-![太郎良2019](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png)    
-![太郎良2019](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png)    
+---
+###### 6
+## 考古学における地域研究1
+#### 構成要素の分布とは?    
+<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png">    
+<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png">    
 
 ---
