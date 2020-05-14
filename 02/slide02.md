@@ -79,13 +79,17 @@ layout: false
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
 <img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png">   
+![太郎良2019図1](img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png)   
 <img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png">    
+![太郎良2019図7-8](img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png)    
+
 
 ---
 ###### 6
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
 <img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png">    
+![太郎良2019図4-5](img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png)   
 
 ---
 ###### 7
@@ -106,5 +110,8 @@ layout: false
 **自治体史（都道府県・市町村史）**
 * ある自治体の範囲の歴史（および関連分野）を網羅する
     * 例）『新修港区史』[ADEAC デジタル版港区のあゆみ](https://trc-adeac.trc.co.jp/WJ11D0/WJJS05U/1310305100/1310305100100010?dtl=all)  
+        * 地形（地質）・環境  
+        * 原始・古代（考古学中心）  
+        * 中世・近世・近代（文献史学中心）  
 
 ---
