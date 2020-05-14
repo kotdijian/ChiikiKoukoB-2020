@@ -79,9 +79,9 @@ layout: false
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
 <img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png">   
-![太郎良2019図1](img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png)   
+![太郎良2019図1](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png)   
 <img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png">    
-![太郎良2019図7-8](img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png)    
+![太郎良2019図7-8](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png)    
 
 
 ---
@@ -89,7 +89,7 @@ layout: false
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
 <img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png">    
-![太郎良2019図4-5](img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png)   
+![太郎良2019図4-5](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png)   
 
 ---
 ###### 7
