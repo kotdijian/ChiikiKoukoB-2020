@@ -2,11 +2,11 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
-# タイトル
+# 考古学における地域研究
 １ページ目
 ---
 layout:false
-## スライド１
+## 今日のリソース
 ### スライド１
 ２ページ目
 
