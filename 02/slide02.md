@@ -58,7 +58,8 @@ layout: false
 >型式と分布圏    
 >型式は時間的にある限られた範囲に存在するととも間的領域に分布する。これを型式の分布圏と呼ぶ。 個々の型式はそれぞれの固有の分布圏を持つが， これは，その型式を作り出し，用いた一群の人々――人間集団――の活動した空間的範囲を示す証拠として重要なデータとなるものである。 (鈴木1988:67-68) 
 
-img: url(https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png)  
+<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png">  
+![形式と分布圏](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png)  
 
 ---
 ###### 5
@@ -85,4 +86,14 @@ img: url(https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
 <img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png">    
+
+---
+###### 7
+## 考古学における地域研究2
+#### 考古学の要素が従：「地域史」研究
+
+**地域史とは?**
+* 一定の「地域」の歴史、「郷土史」とも <> 「日本史」や「世界史」と対比される  
+* 時期・時代を越えた通史的な研究   
+
 ---
