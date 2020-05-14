@@ -135,6 +135,6 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.p
 #### 景観論
 
 * 歴史地理学
-    * [『地形からみた歴史』](https://bookclub.kodansha.co.jp/product?item=0000211623)
+    * [『地形からみた歴史』](https://bookclub.kodansha.co.jp/product?item=0000211623)  
 https://cv.bkmkn.kodansha.co.jp/9784062921435/9784062921435_w.jpg
-![日下1991](https://cv.bkmkn.kodansha.co.jp/9784062921435/9784062921435_w.jpg width=50%)
+![日下1991](https://cv.bkmkn.kodansha.co.jp/9784062921435/9784062921435_w.jpg;width=50%)
