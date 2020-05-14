@@ -126,9 +126,14 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig
 
 *　ある地域における遺跡・遺物分布の時間的変遷  
 https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.png
-![太郎良2019図4-5](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.png)   
+![原村誌](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.png)   
 
 ---
 ###### 10
 ## 考古学における地域研研究3
-#### 
+#### 景観論
+
+* 歴史地理学
+    * https://bookclub.kodansha.co.jp/product?item=0000211623
+https://cv.bkmkn.kodansha.co.jp/9784062921435/9784062921435_w.jpg
+![日下1992](https://cv.bkmkn.kodansha.co.jp/9784062921435/9784062921435_w.jpg)
