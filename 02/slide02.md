@@ -86,9 +86,7 @@ right[(戸沢1986：図1)]
 ###### 6
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
-https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019fig1.png  
 [![太郎良2019図1](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019fig1.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019fig1.png)   
-https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs7-8.png  
 [![太郎良2019図7-8](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs7-8.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs7-8.png)    
 
 
@@ -96,7 +94,6 @@ https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs
 ###### 6
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
-https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs4-5.png
 [![太郎良2019図4-5](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs4-5.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs4-5.png)   
 
 ---
@@ -128,7 +125,6 @@ https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs
 #### 考古学における「地域史」  
 
 *　ある地域における遺跡・遺物分布の時間的変遷  
-https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/yatsugatake.png
 [![原村誌](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/yatsugatake.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/yatsugatake.png)   
 
 ---
