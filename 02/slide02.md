@@ -18,6 +18,7 @@ layout: false
 * 戸沢充則 1986a「総論」『岩波講座日本考古学5』岩波書店    
 * 戸沢充則 1986b「縄文時代の地域と文化」『岩波講座日本考古学5』岩波書店    
 * 横山浩一 1978 「考古学とはどんな学問か」『日本考古学を学ぶ1』有斐閣    
+* 太郎良真妃 2019 「多属性の統計解析による土器様式の空間分析」『考古形態測定学ワークショップ#01〈かたち〉を測る・分ける・読み解く－考古学における形態の測定と理解とは何か－』考古形態測定学研究会  
 
 ---
 ###### 2
@@ -58,8 +59,12 @@ layout: false
 >型式と分布圏    
 >型式は時間的にある限られた範囲に存在するととも間的領域に分布する。これを型式の分布圏と呼ぶ。 個々の型式はそれぞれの固有の分布圏を持つが， これは，その型式を作り出し，用いた一群の人々――人間集団――の活動した空間的範囲を示す証拠として重要なデータとなるものである。 (鈴木1988:67-68) 
 
-<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png">  
-https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png  
+https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png
+![型式と分布](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.png)  
+(鈴木1988: 第11図)
+https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/pottery-lithic.png
+![土器型式と石器組成](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/pottery-lithic.png)  
+right[(戸沢1986：図1)]
 
 ---
 ###### 5
@@ -78,9 +83,9 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.p
 ###### 6
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
-<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png">   
+https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png  
 ![太郎良2019図1](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019fig1.png)   
-<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png">    
+https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png  
 ![太郎良2019図7-8](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs7-8.png)    
 
 
@@ -88,7 +93,7 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.p
 ###### 6
 ## 考古学における地域研究1
 #### 構成要素の分布とは?    
-<img src="https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png">    
+https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png
 ![太郎良2019図4-5](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/Tarora2019figs4-5.png)   
 
 ---
@@ -104,8 +109,8 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.p
 
 ---
 ###### 8
-## 考古学における地域研究」2
-#### 地域史の代表例  
+## 考古学における地域研究2
+#### 地域史の例  
 
 **自治体史（都道府県・市町村史）**
 * ある自治体の範囲の歴史（および関連分野）を網羅する
@@ -115,3 +120,15 @@ https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/type-region.p
         * 中世・近世・近代（文献史学中心）  
 
 ---
+###### 9
+## 考古学における地域研究2  
+#### 考古学における「地域史」  
+
+*　ある地域における遺跡・遺物分布の時間的変遷  
+https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.png
+![太郎良2019図4-5](https://github.com/kotdijian/ChiikiKoukoB-2020/blob/master/02/figs/yatsugatake.png)   
+
+---
+###### 10
+## 考古学における地域研研究3
+#### 
