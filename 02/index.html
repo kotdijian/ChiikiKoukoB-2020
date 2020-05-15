@@ -76,22 +76,21 @@ index.html
         width: 48%;
         float: right;
       }
-    </style>
+     /* 画像縮小 */
+      remark.macros.scale = function (percentage) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
+        // Usage:
+        //   ![:scale 50%](image.jpg)
+      // Outputs:
+      //   <img src="image.jpg" style="width: 50%" />
+      };    </style>
 </head>
 <body>
   <!-- Remarkjs -->
   <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript"></script>
   <script type="text/javascript">
- /* 画像縮小 */
-    remark.macros.scale = function (percentage) {
-        var url = this;
-        return '<img src="' + url + '" style="width: ' + percentage + '" />';
-        // Usage:
-        //   ![:scale 50%](image.jpg)
-   // Outputs:
-   //   <img src="image.jpg" style="width: 50%" />
-      };
-/* スライドソース */
+    /* スライドソース */
     // slide02.md
     var slideshow = remark.create({sourceUrl: "slide02.md", ratio: `16:9`});
   </script>
