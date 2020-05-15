@@ -35,11 +35,11 @@
     1. 設定をクリック（またはZoomウェブサイトからサインイン）
 [![](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomSetting.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomSetting.png)
     2. プロフィール→「編集」をクリック
-[![](https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSettings.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSettings.png)
+[![](https://raw.github.cim/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSettings.png)](https://raw.github.cim/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSettings.png)
     3. 姓名を入力・変更（プロフィール画像も変更できます）
-[![](https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSetting2.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSetting2.png)
+[![](https://raw.github.cim/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSetting2.png)](https://raw.github.cim/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSetting2.png)
     4. ミーティング画面からも変更可能
-[![](https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSetting3.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSetting3.png)
+[![](https://raw.github.cim/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSetting3.png)](https://raw.github.cim/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomProfileSetting3.png)
     * **Zoomアカウントをほかでも使用していてプロフィールを変更したくない人は、*4*の方法で授業時間だけ表示名を変更してください**
 
 ***
@@ -62,7 +62,7 @@
 5. ただしZoomチャットはひとつのチャンネルしかありません。参加者全員が投稿を重ねるとメッセージが流れてしまうため、質問や討論には不向きです。このためSlack、Googleドキュメントを併用します
 
 6. チャットの代わりに有効なのがリアクション（「非言語的フィードバック」）です（使い方は[こちら](https://zoom-support.nissho-ele.co.jp/hc/ja/articles/360025314131-%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E4%B8%AD%E3%81%AE%E9%9D%9E%E8%A8%80%E8%AA%9E%E7%9A%84%E3%83%95%E3%82%A3%E3%83%BC%E3%83%89%E3%83%90%E3%83%83%E3%82%AF)）
-[![ZoomReaction](https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomReaction.png](https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomReaction.png)
+[![ZoomReaction](https://raw.github.cim/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomReaction.png](https://raw.github.cim/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/ZoomReaction.png)
     * **授業中、進行確認のためにこの機能を使用します。講師の呼びかけに応じてリアクションしましょう**
     
 7. ガイダンス（5/8初回授業）時に、進行方法と各ソフト・サービスの使い方について簡単なエクササイズを行ないます。ぜひ参加してください
@@ -95,14 +95,14 @@
 4. はじめのうちは、共同ノートへの記入事項などについて講師が適宜指示をしますが、慣れてきたらみなさんで自主的に記録を取ってみてください。
 
 5. ひとりひとりで記録・まとめを作成するだけでなく、**みんな協力・集合知で共同ノートを完成させましょう!!**
-[![](https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/CollaboNoteTaking.png](https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/CollaboNoteTaking.png)    
+[![](https://raw.github.cim/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/CollaboNoteTaking.png](https://raw.github.cim/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/CollaboNoteTaking.png)    
 
 ***
 ###### 5
 ### **5. 資料等を確認しよう**
 
-1. 講義資料は、**1.GoogleDrive** (リンクURLはSlack上で共有します)、または **[2.GitHub](https://github.com/kotdijian/ChiikiKoukoB-2020)
-[![](https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/GitHubRepositry.png)](https://github.com/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/CollaboNoteTaking.png)** で提供します。
+1. 講義資料は、**1.GoogleDrive** (リンクURLはSlack上で共有します)、または **[2.GitHub](https://raw.github.cim/kotdijian/ChiikiKoukoB-2020)
+[![](https://raw.github.cim/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/GitHubRepositry.png)](https://raw.github.cim/kotdijian/ChiikiKoukoB-2020/master/ZoomMeetingImages/CollaboNoteTaking.png)** で提供します。
 
 2. GoogleDriveは外部公開しませんので、リンクURLは公開したり、他人と共有しないようにしてください。    
 
