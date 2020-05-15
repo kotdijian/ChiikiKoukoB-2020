@@ -10,6 +10,7 @@ class: center, middle, inverse
 layout: false
 ###### 1
 ### 前回の振り返り
+* アンケート結果  
 
 ### 今日のリソース
 * **[Googleドキュメント第2回まとめ](https://drive.google.com/open?id=1_qMFArEWT_RzzitbF6cAIs4niIEuXPSqXt0bk1cPApI)**    
@@ -61,7 +62,7 @@ layout: false
 [![](https://raw.githubusercontent.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/type-region.png)](https://raw.githubusercontent.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/type-region.png) 
 (鈴木1988: 第11図)
 [![](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/pottery-lithic.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/pottery-lithic.png)
-right[(戸沢1986：図1)]
+(戸沢1986：図1)
 
 ---
 ###### 5
@@ -118,7 +119,7 @@ right[(戸沢1986：図1)]
 #### 考古学における「地域史」  
 
 *　ある地域における遺跡・遺物分布の時間的変遷  
-[![原村誌:scale80%](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/yatsugatake.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/yatsugatake.png)   
+[![:scale80%](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/yatsugatake.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/yatsugatake.png)   
 
 ---
 ###### 10
