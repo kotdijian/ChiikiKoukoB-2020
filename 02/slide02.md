@@ -16,7 +16,6 @@ layout: false
 * **[Googleドキュメント第2回まとめ](https://drive.google.com/open?id=1_qMFArEWT_RzzitbF6cAIs4niIEuXPSqXt0bk1cPApI)**    
 
 ---
-
 ###### 2
 ## 地域とはなにか
 
@@ -253,6 +252,6 @@ layout: false
 ###### 20
 ## ご案内
 
-**3D写真計測ワークショップをオンラインで開催します。興味のある方はどうぞ**
-https://peatix.com/group/7247028/events
+**[3D写真計測ワークショップ](https://kotdijian.github.io/arch3dphotogrammetry/)をオンラインで開催します。興味のある方はどうぞ**
+
 ---
