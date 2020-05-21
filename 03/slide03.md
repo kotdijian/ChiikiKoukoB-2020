@@ -99,9 +99,11 @@ layout: false
 * [Googleマップ](https://www.google.co.jp/maps/)／[Google Earth](https://www.google.co.jp/intl/ja/earth/)  
 * [Googleマイマップ](https://www.google.co.jp/intl/ja/maps/about/mymaps/)  
 * [Bingマップ](https://www.bing.com/maps)／[Yahoo!地図](https://map.yahoo.co.jp/)  
+
 --
 
 * [地理院地図](https://maps.gsi.go.jp/)／[地理院地図Globe](https://maps.gsi.go.jp/globe/index_globe.html)  
+
 --
 
 * [ひなたGIS](https://hgis.pref.miyazaki.lg.jp/hinata/) →あとでやります!!  
@@ -112,9 +114,11 @@ layout: false
 
 **知ってますか?**
 * [地質図Navi](https://gbank.gsj.jp/geonavi/)  
+
 --
 
 * [国土交通省GISホームページ](https://nlftp.mlit.go.jp/index.html)  
+
 ---
 ###### 9
 ## 4.地域考古学研究のリソース4　考古学情報
@@ -141,6 +145,7 @@ layout: false
 --
 
 3. **地図の上に、考古学情報と地理情報を重ねる。相互の関係を検討する...**
+
 --
 
 ## 地域考古学研究の第一歩  
