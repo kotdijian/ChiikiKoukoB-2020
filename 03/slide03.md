@@ -24,7 +24,8 @@ layout: false
 ---
 ###### 2
 ### 今日のリソース
-* **[Googleドキュメント第3回まとめ](https://drive.google.com/open?id=1RWiQch4dFV0e2y9XPXjsOM-Lehzhssed4hQEKZ4Oqow)**    
+* **[Googleドキュメント第3回まとめ](https://drive.google.com/open?id=1RWiQch4dFV0e2y9XPXjsOM-Lehzhssed4hQEKZ4Oqow)**  
+
 
 --
 ## 00.著作物の利用と著作権法(前回補足)
@@ -54,8 +55,12 @@ layout: false
 ###### 4
 ## 00.著作物の利用と著作権法（結）
 * 次のものは著作物にあたるかどうか考えてみよう  
-    * 発掘調査報告書／遺跡一覧表と遺跡地図  
+    * 発掘調査報告書  
+--
+    * 遺跡一覧表と遺跡地図  
+--
     * 遺構や遺物の実測図  
+--
     * レイアウトと照明を工夫した写真／俯瞰写真  
 
 ---
@@ -72,7 +77,7 @@ layout: false
 * しかし書誌の特定は難関 → 著者(名字)+刊行年の重複、記載のぶれ...  
 * UID, URI, URL, DOI：「一意に」書誌を識別する情報  
 
-----
+---
 ###### 6
 ## 1.地域考古学研究のリソース2　文献資料検索の補足
 * [UID](http://e-words.jp/w/UID.html)：Unique Identifier. ある対象をほかとは区別する一意の識別子  
@@ -95,8 +100,10 @@ layout: false
 * [Googleマイマップ](https://www.google.co.jp/intl/ja/maps/about/mymaps/)  
 * [Bingマップ](https://www.bing.com/maps)／[Yahoo!地図](https://map.yahoo.co.jp/)  
 --
+
 * [地理院地図](https://maps.gsi.go.jp/)／[地理院地図Globe](https://maps.gsi.go.jp/globe/index_globe.html)  
 --
+
 * [ひなたGIS](https://hgis.pref.miyazaki.lg.jp/hinata/) →あとでやります!!  
 
 ---
@@ -106,8 +113,8 @@ layout: false
 **知ってますか?**
 * [地質図Navi](https://gbank.gsj.jp/geonavi/)  
 --
-* [国土交通省GISホームページ](https://nlftp.mlit.go.jp/index.html)  
 
+* [国土交通省GISホームページ](https://nlftp.mlit.go.jp/index.html)  
 ---
 ###### 9
 ## 4.地域考古学研究のリソース4　考古学情報
@@ -126,9 +133,11 @@ layout: false
 ###### 10
 ## 5.地域考古学研究のツール1　位置情報・空間情報を軸にまとめる
 1. **考古学情報**：遺跡の位置、内容(時代・遺構・遺物の種類...)  
+
 --
 
 2. **地理情報**：地形・地質...  
+
 --
 
 3. **地図の上に、考古学情報と地理情報を重ねる。相互の関係を検討する...**
@@ -140,20 +149,27 @@ layout: false
 ###### 11
 ## 6.実習：東京都遺跡地図を題材に
 1. 区市町村ごとにリストを作る  
+
+
 --
 2. ひなたGISに読み込む  
+
 
 --
 3. 東京都遺跡地図を参考に位置を読み取る  
 
+
 --
 4. ひなたGISで位置座標の一覧を取得する  
+
 
 --
 5. 遺跡一覧に位置座標を加える  
 
+
 --
 6. 位置座標付きの一覧リストの完成!
+
 
 ---
 ###### 10
