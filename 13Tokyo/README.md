@@ -8,14 +8,14 @@ This work has been initiated as a part of a class of "Regional Archaeological St
     * The lists organized by each municiparity;  
     * Formatted in .csv (UTF-8 without BOM);
     * The first 5 digit number on each file name is the [Local Government Code](http://data.e-stat.go.jp/lodw/en/provdata/lodRegion);  
-    * The files ended with "+coord" have coordinates, not by shape but by manually chosen representative point;  
+    * The files ended with "_coord" have coordinates, not by shape but by manually chosen representative point;  
     * Thus no guarantee of accuracy on these coordinates so far.
 
 東京学芸大学2020年度春学期開講「[地域考古学B](https://portal.u-gakugei.ac.jp/syllabus/)」(教育支援課程教育支援専攻文化遺産教育サブコース60737000)の一環として作成を開始しました。  
     * リストは自治体ごと  
     * .csv形式 (UTF-8, BOMなし)  
     * ファイル名の上5ケタは[自治体コード](https://www.soumu.go.jp/denshijiti/code.html)  
-    * ファイル名に"+coord"がついているものは位置座標あり、ただし手動で与えられた代表点でありシェープではない  
+    * ファイル名に"_coord"がついているものは位置座標あり、ただし手動で与えられた代表点でありシェープではない  
     * 位置座標の正確性は保証されない  
 
 ## Contributing／コントリビューション
