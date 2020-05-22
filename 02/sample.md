@@ -41,9 +41,13 @@ layout:false
 
 * 地域の示標は何か?    
 
-.left-column[* 考古学以外の要素が主／考古学の要素が従]
+.left-column[
+* 考古学以外の要素が主／考古学の要素が従
+]
     
-.right-column[* 考古学の要素が主／考古学以外の要素が従]
+.right-column[
+* 考古学の要素が主／考古学以外の要素が従
+]
     
 ---
 ###### 3
@@ -63,5 +67,54 @@ layout:false
 [![Tozawa1986fig1](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/pottery-lithic.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/pottery-lithic.png)
 (戸沢1986：図1)
 
+---
+###### 5
+## 考古学における地域研究1
+#### 考古学の要素が主：「分布論」    
 
+**分布をみる単位は何か?**    
+
+* 遺物・遺構の形式・型式の組み合わせ・組成
+
+* 特徴的な遺物・遺構
+
+* 遺物・遺構の構成要素
+
+---
+###### 6
+## 考古学における地域研究1
+#### 構成要素の分布とは?    
+[![太郎良2019図1](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019fig1.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019fig1.png) 
+[![太郎良2019図7-8](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs7-8.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs7-8.png)    
+
+---
+###### 6
+## 考古学における地域研究1
+#### 構成要素の分布とは?    
+[![太郎良2019図4-5](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs4-5.png)](https://raw.github.com/kotdijian/ChiikiKoukoB-2020/master/02/figs/Tarora2019figs4-5.png)   
+
+---
+###### 7
+## 考古学における地域研究2
+#### 考古学の要素が従：「地域史」研究
+
+**地域史とは?**
+* 一定の「地域」の歴史、「郷土史」とも <> 「日本史」や「世界史」と対比される  
+* 「地域」の範囲は地理的、歴史的、文化的に設定される  
+* 設定された範囲における時期・時代を越えた通史的な研究   
+* 複数・多数の要素（遺物・遺構等）を取り扱う  
+
+---
+###### 8
+## 考古学における地域研究2
+#### 地域史の例  
+
+**自治体史（都道府県・市町村史）**
+* ある自治体の範囲の歴史（および関連分野）を網羅する
+    * 例）『新修港区史』[ADEAC デジタル版港区のあゆみ](https://trc-adeac.trc.co.jp/WJ11D0/WJJS05U/1310305100/1310305100100010?dtl=all)  
+        * 地形（地質）・環境  
+        * 原始・古代（考古学中心）  
+        * 中世・近世・近代（文献史学中心）  
+
+---
 
