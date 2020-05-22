@@ -23,6 +23,10 @@ layout: false
 
 ---
 ###### 2
+### 事後学習課題の確認  
+* なぜそれらの文献をリストにしたのでしょうか?
+    ☞ 動機・理由をGoogleドキュメントに書き込んでください  
+
 ### 今日のリソース
 * **[Googleドキュメント第3回まとめ](https://drive.google.com/open?id=1RWiQch4dFV0e2y9XPXjsOM-Lehzhssed4hQEKZ4Oqow)**  
 
@@ -50,6 +54,21 @@ layout: false
 * 著作者人格権：公表権+氏名表示権+同一性保持権
     
 * 著作隣接権：実演・レコード製作・放送事業者  
+
+---
+###### 3-2
+## 著作権法35条の改正と令和2年度の特例(前回補足)  
+
+* [文化庁　著作権](https://www.bunka.go.jp/seisaku/chosakuken/index.html)
+    * [著作権法の一部を改正する法律 概要](https://www.bunka.go.jp/seisaku/chosakuken/hokaisei/h30_hokaisei/pdf/r1406693_01.pdf)
+
+* [著作物の教育利用に関する関係者フォーラム](https://forum.sartras.or.jp/info/004/)
+    * 「改正著作権法第３５条運用指針（令和２（2020）年度版）」を公表    
+        * https://forum.sartras.or.jp/info/004/
+        * https://forum.sartras.or.jp/wp-content/uploads/kongounyo.pdf
+        * https://forum.sartras.or.jp/wp-content/uploads/unyoshishin2020.pdf
+
+→ PDFコピーの配布は受講生に限定します  
 
 ---
 ###### 4
@@ -145,13 +164,23 @@ layout: false
 --
 
 3. **地図の上に、考古学情報と地理情報を重ねる。相互の関係を検討する...**
-
 --
+    1. 基礎地図の上に描画する：場所の確認  
+--
+    2. 地形や地物との関係を知る  
+--
+    3. その他の地理情報との関係を知る  
 
 ## 地域考古学研究の第一歩  
+--
+* **さらに高度な空間分析も、まずはここから**
 
 ---
-###### 11
+###### 13
+
+
+---
+###### 12
 ## 6.実習：東京都遺跡地図を題材に
 1. 区市町村ごとにリストを作る  
 
@@ -177,7 +206,18 @@ layout: false
 
 
 ---
-###### 10
+###### 13
 ## 7. 事後学習課題
 
+1. 東京都遺跡地図で担当の市域を検索、遺跡一覧を表示する  
 
+2. 情報をコピーしGoogleスプレッドシートへペースト、行列を入れ替えて一覧表を作成  
+
+3. ひなたGISを利用して、位置情報（緯度・経度）を取得する。  
+    * 便利機能：Google Chrome→TabResize  
+
+4. 分担はGoogleドキュメントのとおり  
+
+5. 入力先はGoogleスプレッドシートにタブが作成していあります。  
+
+---
