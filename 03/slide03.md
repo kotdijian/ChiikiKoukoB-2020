@@ -6,7 +6,7 @@ class: center, middle, inverse
 # 考古学における地域研究 
 地域考古学B-2020年度第3回目
 2020/5/22
-* [授業ページトップに戻る](https://kotdijian.github.io/ChiikiKoukoB-2020/)
+[授業ページトップに戻る](https://kotdijian.github.io/ChiikiKoukoB-2020/)
 
 ---
 layout: false
@@ -23,8 +23,13 @@ layout: false
 
 ---
 ###### 2
+### 事後学習課題の確認  
+* なぜそれらの文献をリストにしたのでしょうか?
+    ☞ 動機・理由をGoogleドキュメントに書き込んでください  
+
 ### 今日のリソース
-* **[Googleドキュメント第3回まとめ](https://drive.google.com/open?id=1RWiQch4dFV0e2y9XPXjsOM-Lehzhssed4hQEKZ4Oqow)**    
+* **[Googleドキュメント第3回まとめ](https://drive.google.com/open?id=1RWiQch4dFV0e2y9XPXjsOM-Lehzhssed4hQEKZ4Oqow)**  
+
 
 --
 ## 00.著作物の利用と著作権法(前回補足)
@@ -51,11 +56,30 @@ layout: false
 * 著作隣接権：実演・レコード製作・放送事業者  
 
 ---
+###### 3-2
+## 著作権法35条の改正と令和2年度の特例(前回補足)  
+
+* [文化庁　著作権](https://www.bunka.go.jp/seisaku/chosakuken/index.html)
+    * [著作権法の一部を改正する法律 概要](https://www.bunka.go.jp/seisaku/chosakuken/hokaisei/h30_hokaisei/pdf/r1406693_01.pdf)
+
+* [著作物の教育利用に関する関係者フォーラム](https://forum.sartras.or.jp/info/004/)
+    * 「改正著作権法第３５条運用指針（令和２（2020）年度版）」を公表    
+        * https://forum.sartras.or.jp/info/004/
+        * https://forum.sartras.or.jp/wp-content/uploads/kongounyo.pdf
+        * https://forum.sartras.or.jp/wp-content/uploads/unyoshishin2020.pdf
+
+→ PDFコピーの配布は受講生に限定します  
+
+---
 ###### 4
 ## 00.著作物の利用と著作権法（結）
 * 次のものは著作物にあたるかどうか考えてみよう  
-    * 発掘調査報告書／遺跡一覧表と遺跡地図  
+    * 発掘調査報告書  
+--
+    * 遺跡一覧表と遺跡地図  
+--
     * 遺構や遺物の実測図  
+--
     * レイアウトと照明を工夫した写真／俯瞰写真  
 
 ---
@@ -72,7 +96,7 @@ layout: false
 * しかし書誌の特定は難関 → 著者(名字)+刊行年の重複、記載のぶれ...  
 * UID, URI, URL, DOI：「一意に」書誌を識別する情報  
 
-----
+---
 ###### 6
 ## 1.地域考古学研究のリソース2　文献資料検索の補足
 * [UID](http://e-words.jp/w/UID.html)：Unique Identifier. ある対象をほかとは区別する一意の識別子  
@@ -94,9 +118,13 @@ layout: false
 * [Googleマップ](https://www.google.co.jp/maps/)／[Google Earth](https://www.google.co.jp/intl/ja/earth/)  
 * [Googleマイマップ](https://www.google.co.jp/intl/ja/maps/about/mymaps/)  
 * [Bingマップ](https://www.bing.com/maps)／[Yahoo!地図](https://map.yahoo.co.jp/)  
+
 --
+
 * [地理院地図](https://maps.gsi.go.jp/)／[地理院地図Globe](https://maps.gsi.go.jp/globe/index_globe.html)  
+
 --
+
 * [ひなたGIS](https://hgis.pref.miyazaki.lg.jp/hinata/) →あとでやります!!  
 
 ---
@@ -105,7 +133,9 @@ layout: false
 
 **知ってますか?**
 * [地質図Navi](https://gbank.gsj.jp/geonavi/)  
+
 --
+
 * [国土交通省GISホームページ](https://nlftp.mlit.go.jp/index.html)  
 
 ---
@@ -126,37 +156,68 @@ layout: false
 ###### 10
 ## 5.地域考古学研究のツール1　位置情報・空間情報を軸にまとめる
 1. **考古学情報**：遺跡の位置、内容(時代・遺構・遺物の種類...)  
+
 --
 
 2. **地理情報**：地形・地質...  
+
 --
 
 3. **地図の上に、考古学情報と地理情報を重ねる。相互の関係を検討する...**
 --
+    1. 基礎地図の上に描画する：場所の確認  
+--
+    2. 地形や地物との関係を知る  
+--
+    3. その他の地理情報との関係を知る  
 
 ## 地域考古学研究の第一歩  
+--
+* **さらに高度な空間分析も、まずはここから**
 
 ---
-###### 11
+###### 13
+
+
+---
+###### 12
 ## 6.実習：東京都遺跡地図を題材に
 1. 区市町村ごとにリストを作る  
+
+
 --
 2. ひなたGISに読み込む  
+
 
 --
 3. 東京都遺跡地図を参考に位置を読み取る  
 
+
 --
 4. ひなたGISで位置座標の一覧を取得する  
+
 
 --
 5. 遺跡一覧に位置座標を加える  
 
+
 --
 6. 位置座標付きの一覧リストの完成!
 
+
 ---
-###### 10
+###### 13
 ## 7. 事後学習課題
 
+1. 東京都遺跡地図で担当の市域を検索、遺跡一覧を表示する  
 
+2. 情報をコピーしGoogleスプレッドシートへペースト、行列を入れ替えて一覧表を作成  
+
+3. ひなたGISを利用して、位置情報（緯度・経度）を取得する。  
+    * 便利機能：Google Chrome→TabResize  
+
+4. 分担はGoogleドキュメントのとおり  
+
+5. 入力先はGoogleスプレッドシートにタブが作成していあります。  
+
+---
