@@ -23,6 +23,7 @@ layout: false
     **一覧表で提供してくれていたら便利ですよね?**  
 
 --
+
 ### 今日のリソース
 * **[Googleドキュメント第4回まとめ](https://drive.google.com/open?id=10ije2uWAW9R9Wv80i6-Mw48z9d_37dsCtuqcFpLB5sA)**  
 
@@ -32,10 +33,19 @@ layout: false
 * 作成したのはGoogleスプレッドシートです  
 * ひなたGISに読み込めるのは.csv形式です  
     * .csv形式とは? ([CSVファイル「パソコン初心者講座」](http://www.pc-master.jp/sousa/csv.html)  
+    
+    * テキストファイルとバイナリファイル（[ウィキペディア「テキストファイル」より](https://ja.wikipedia.org/wiki/%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB#%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A8%E3%83%90%E3%82%A4%E3%83%8A%E3%83%AA%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB)  
+
+--
 
 * Googleスプレッドシートから.csv形式のファイルを書き出します  
 
+--
+
 **☞その前に...
+
+--
+**位置情報が入っていないんじゃ...?  
 
 * 著作権法　（[Wikipedia「著作権法」](https://ja.wikipedia.org/wiki/%E8%91%97%E4%BD%9C%E6%A8%A9%E6%B3%95)）  
     * 複製権
