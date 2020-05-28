@@ -17,15 +17,26 @@ layout: false
 * ひなたGISを使って分布図を作成しよう ＜ ここから  
 
 --
+
 ### 事後学習課題の確認  
+* 東京都遺跡地図からデータのコピペ・一覧化  
+    **一覧表で提供してくれていたら便利ですよね?**  
 
 --
 ### 今日のリソース
-* **[Googleドキュメント第3回まとめ](https://drive.google.com/open?id=10ije2uWAW9R9Wv80i6-Mw48z9d_37dsCtuqcFpLB5sA)**  
+* **[Googleドキュメント第4回まとめ](https://drive.google.com/open?id=10ije2uWAW9R9Wv80i6-Mw48z9d_37dsCtuqcFpLB5sA)**  
 
 ---
 ###### 2
-## 0.著作物の利用と著作権法（続）
+## 1.作成したリストを地図に表示してみよう  
+* 作成したのはGoogleスプレッドシートです  
+* ひなたGISに読み込めるのは.csv形式です  
+    * .csv形式とは? ([CSVファイル「パソコン初心者講座」](http://www.pc-master.jp/sousa/csv.html)  
+
+* Googleスプレッドシートから.csv形式のファイルを書き出します  
+
+**☞その前に...
+
 * 著作権法　（[Wikipedia「著作権法」](https://ja.wikipedia.org/wiki/%E8%91%97%E4%BD%9C%E6%A8%A9%E6%B3%95)）  
     * 複製権
     * 上演権・演奏研・上映権・口述権
