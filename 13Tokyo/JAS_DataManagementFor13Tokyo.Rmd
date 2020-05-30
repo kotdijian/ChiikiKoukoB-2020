@@ -1,0 +1,35 @@
+---
+title: "JAS_DataManagementFor13Tokyo"
+author: "kotdijian"
+date: "2020年5月31日"
+output:
+  pdf_document:
+       latex_engine: xelatex 
+  html_document: default
+  word_document: default
+documentclass: bxjsarticle
+classoption: xelatex,ja=standard
+geometry: no
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+Sys.setlocale("LC_ALL","English") #Windowsにおけるエンコード問題解決用
+```
+
+## はじめに  
+これは、[東京都遺跡地図情報インターネット提供サービス](https://tokyo-iseki.metro.tokyo.lg.jp/)の収録情報を[リスト化したもの](https://github.com/kotdijian/ChiikiKoukoB-2020/tree/master/13Tokyo)を整理・加工するためのコードです。
+東京学芸大学2020年度春学期開講「地域考古学B」のために作成されました。
+
+## GIS用_coordデータ統合
+東京都遺跡地図情報のリストと、手動で取得した代表点座標のリスト(_coord)を統合します
+```{r}
+
+```
+
+## 被分割リスト統合
+入力作業上の都合などにより分割されているリストを、自治体単位などで統合します。
+
+
+
+
