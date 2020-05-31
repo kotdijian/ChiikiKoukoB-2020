@@ -20,11 +20,55 @@ Sys.setlocale("LC_ALL","English") #Windowsにおけるエンコード問題解�
 ## はじめに  
 これは、[東京都遺跡地図情報インターネット提供サービス](https://tokyo-iseki.metro.tokyo.lg.jp/)の収録情報を[リスト化したもの](https://github.com/kotdijian/ChiikiKoukoB-2020/tree/master/13Tokyo)を整理・加工するためのコードです。
 東京学芸大学2020年度春学期開講「地域考古学B」のために作成されました。
+現時点ではローカルリポジトリでの作業を前提としています。
+
+## 必要パッケージのインストールとアクティベート
+Tidyverseとrioをインストールします。  
+```{r chunk1, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+if(!require("tidyverse")) install.packages('tidyverse', repos='http://cran.us.r-project.org')  #tidyverseのチェックとインストール  
+if(!require("rio")) install.packages('rio', repos='http://cran.us.r-project.org')  #rioのチェックとインストール  
+
+```
+
+## リスト・ファイル一覧取得
+ローカルリポジトリからCSVファイルの一覧を取得します
+```{r chunk2, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+CsvList <- list.files(pattern = "csv") # ファイル形式がcsvであるファイルの一覧をCsvListに収納
+
+length(CsvList) #ファイルの数を確認
+head(CsvList) # 最初の数行だけ表示する場合
+
+  # CsvList #確認(すべてのファイル名が表示されるので数が多い場合は注意)
+
+```
+
+## csv読み込みと確認
+ローカルリポジトリからCSVファイルを読み込みます
+```{r chunk3, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+Setagaya <- import("13112_Setagaya-ku08.csv", setclass= "tbl_df")
+  # AAA <- import("BBB.csv", setclass= "tbl_df")：AAAにBBB.csvをテーブルとして(setclass = "tbl_df")読み込み
+  # AAA = 読み込み先のオブジェクト名(ここで指定)
+  # BBB = 読み込み元のファイル名(ローカルリポジトリ内なのでファイル名のみ)
+  # Setagaya = iconv(Setagaya, from = "CP932", to = "utf-8")
+
+# 確認用
+head(Setagaya)
+
+# 
+
+```
+
+1行目(リストのラベル)を読み込み正しいかどうかを確認します
+```{r chunk4, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+
+```
 
 ## GIS用_coordデータ統合
 東京都遺跡地図情報のリストと、手動で取得した代表点座標のリスト(_coord)を統合します
-```{r}
+```{r chunk1, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+Setagaya <- import("13112_Setagaya-ku08.csv", setclass = "tbl_df", fileEncoding = "utf8")
 
+head(Setagaya)
 ```
 
 ## 被分割リスト統合
