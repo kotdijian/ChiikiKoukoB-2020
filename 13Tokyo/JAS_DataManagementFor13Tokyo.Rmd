@@ -13,25 +13,38 @@ geometry: no
 ---
 
 ```{r setup, include=FALSE}
+library("knitr")
 knitr::opts_chunk$set(echo = TRUE)
 Sys.setlocale("LC_ALL","English") #Windowsにおけるエンコード問題解決用
 ```
 
+---
 ## はじめに  
 これは、[東京都遺跡地図情報インターネット提供サービス](https://tokyo-iseki.metro.tokyo.lg.jp/)の収録情報を[リスト化したもの](https://github.com/kotdijian/ChiikiKoukoB-2020/tree/master/13Tokyo)を整理・加工するためのコードです。
 東京学芸大学2020年度春学期開講「地域考古学B」のために作成されました。
 現時点ではローカルリポジトリでの作業を前提としています。
 
+---
 ## 必要パッケージのインストールとアクティベート
-Tidyverseとrioをインストールします。  
+Tidyverseとrioをインストールします。表のビジュアル化のためにformattableをインストールします。  
+
 ```{r chunk1, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-if(!require("tidyverse")) install.packages('tidyverse', repos='http://cran.us.r-project.org')  #tidyverseのチェックとインストール  
-if(!require("rio")) install.packages('rio', repos='http://cran.us.r-project.org')  #rioのチェックとインストール  
+#パッケージチェックとインストール
+if(!require("tidyverse")) install.packages('tidyverse', repos='http://cran.us.r-project.org') 
+if(!require("rio")) install.packages('rio', repos='http://cran.us.r-project.org')  
+if(!require("formattable")) install.packages('formattable', repos='http://cran.us.r-project.org')  
+
+#パッケージのアクティベート
+library("tidyverse")
+library("rio")
+library("formattable")
 
 ```
 
-## リスト・ファイル一覧取得
-ローカルリポジトリからCSVファイルの一覧を取得します
+---
+## リスト・ファイル一覧および共通リスト取得
+ローカルリポジトリからCSVファイルの一覧を取得します。また自治体コード、ラベル・テンプレートを取得します。
+
 ```{r chunk2, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
 CsvList <- list.files(pattern = "csv") # ファイル形式がcsvであるファイルの一覧をCsvListに収納
 
@@ -40,40 +53,240 @@ head(CsvList) # 最初の数行だけ表示する場合
 
   # CsvList #確認(すべてのファイル名が表示されるので数が多い場合は注意)
 
+#ラベル・テンプレートの読み込み
+LabelTemplate = import("ListLabel_template.csv", encoding = "UTF-8")
+
 ```
 
-## csv読み込みと確認
-ローカルリポジトリからCSVファイルを読み込みます
+---
+## 統合データ収納オブジェクトと増分カウンターのリセット
+**（分割リストの統合を実行する際に、オブジェクトを空にしておくこと）**
+```{r chunk}
+if (exists("site.total")){rm(site.total)} 
+if (exists("incr")){rm(incr)}
+
+```
+
+---
+## テキストファイルのエンコード確認(確実ならスキップしても良い)
+日本語等マルチバイト文字のエンコーディングは環境・ソフトごとに異なる。TXT,CSVファイルのエンコードを確認し、読み込み時に指定する必要があります(→chunk3)。
+
 ```{r chunk3, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-Setagaya <- import("13112_Setagaya-ku08.csv", setclass= "tbl_df")
-  # AAA <- import("BBB.csv", setclass= "tbl_df")：AAAにBBB.csvをテーブルとして(setclass = "tbl_df")読み込み
-  # AAA = 読み込み先のオブジェクト名(ここで指定)
+guess_encoding("13112_Setagaya-ku04.csv") # ""内に確認するファイル名を入力
+
+```
+
+---
+## csv読み込みと確認
+ローカルリポジトリからCSVファイルを読み込みます。
+```{r chunk4, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+site.n <- import("13112_Setagaya-ku04.csv", setclass= "tbl_df", encoding ="UTF-8")
+  # site.nにBBB.csvをテーブルとして(setclass = "tbl_df")読み込み
+  # site.n = 読み込み先のオブジェクト名(作業用)
   # BBB = 読み込み元のファイル名(ローカルリポジトリ内なのでファイル名のみ)
-  # Setagaya = iconv(Setagaya, from = "CP932", to = "utf-8")
+  # encoding = "UTF-8"で文字コードを指定(シフトJISなら"CP932")
+
+head(site.n) # 確認用
+
+```
+
+JASID、自治体コードは整数型<int>、それ以外は文字列型<chr>であることを確認しましょう。
+
+続いて1行目(リストのラベル)が正しいかどうかを確認します。ラベルが共通化(正規化)されていないと後の処理に支障を来たすので、機械的に処理します。
+```{r chunk5, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+LabelList = names (site.n) #1行目を取得
+
+LabelList #取得結果を表示
+
+# 項目が過不足のチェック→過不足があればファイルを修正
+if (length(LabelList) > length(LabelTemplate)){
+  print("多い")
+} else if (length(LabelList) < length(LabelTemplate)){
+  print("不足")
+} else {
+  print("OK")
+}
+
+# 多い場合の処理
+ # site.n <- select(site.n,-"取得住所")
+```
+
+---
+## ラベル正規化
+LabelTemplateで置き換えます。
+**※項目数過不足の場合は修正後に実行すること**
+
+```{r chunk6, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+colnames(site.n) <- colnames(LabelTemplate) #対象の列名をLabelTemplateの列名に置換
+colnames(site.n) #確認用
+
+```
+
+---
+## _coord.csv読み込みと確認
+ローカルリポジトリから位置座標のCSVファイルを読み込みます
+```{r chunk7, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+site.coord <- import("13112_Setagaya-ku04_coord.csv", setclass= "tbl_df", encoding ="UTF-8")
+  # site.coordにBBB_coord.csvをテーブルとして(setclass = "tbl_df")読み込み
+  # site.coord = 読み込み先のオブジェクト名(作業用)
+  # BBB_coord = 読み込み元のファイル名(ローカルリポジトリ内なのでファイル名のみ)
+  # encoding = "UTF-8"で文字コードを指定(シフトJISなら"CP932")
 
 # 確認用
-head(Setagaya)
-
-# 
+  head(site.n)
 
 ```
 
-1行目(リストのラベル)を読み込み正しいかどうかを確認します
-```{r chunk4, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+---
+## 位置座標の統合
+東京都遺跡地図からの取得データと位置座標のデータを統合します。
+**※ソースの異なるデータを分けて管理するために別保存としています**
+
+まず、双方のレコード数(行数)が一致しているかどうか確認します。
+
+```{r chunk8, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+nrow(site.n) #遺跡地図データの行数
+nrow(site.coord) #座標データの行数
+
+# チェック→不一致なら元データの確認と修正
+if (nrow(site.n) == nrow(site.coord)){
+  print("OK")
+} else {
+  print("不一致")
+  }
 
 ```
 
-## GIS用_coordデータ統合
-東京都遺跡地図情報のリストと、手動で取得した代表点座標のリスト(_coord)を統合します
-```{r chunk1, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-Setagaya <- import("13112_Setagaya-ku08.csv", setclass = "tbl_df", fileEncoding = "utf8")
+続いてUID(=JASID)の一致を確認します。
 
-head(Setagaya)
+```{r chunk9, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+ctr <- 1:nrow(site.n) #行数だけ繰り返すカウンター
+chk.counter <- 0 #TRUEカウンター
+
+for (i in ctr){
+  if (site.n[i,1] == site.coord[i,1]){
+    chk.counter <- chk.counter + 1
+  } else {
+    print (chk.counter)
+    print ("不一致")
+  }
+}
+
+if (chk.counter == nrow(site.n)){
+  print("OK")
+} else {
+  print("不一致")
+}
+```
+
+レコード数とJASIDの一致を確認したら重複するJASIDの列を位置座標データから削除し、遺跡地図データと統合します。
+```{r chunk10, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+site.coord <- select(site.coord,-JASID) #位置座標データからJASID列を削除
+colnames(site.coord) <- c("経度","緯度") #位置座標データのラベルの正規化
+
+site.comb <- cbind(site.n, site.coord) 
+
+site.comb %>% 
+  head() %>% 
+  colnames()
+
 ```
 
 ## 被分割リスト統合
-入力作業上の都合などにより分割されているリストを、自治体単位などで統合します。
+入力作業上の都合などにより分割されているリストを、自治体単位などで統合します。chunk9までの作業で位置座標データを統合したリストに、chunk3～9を実行した次のリストを追加していきます。
+
+最初に、chunk9で作成した遺跡地図情報と位置座標情報の統合リストを新たなオブジェクトに収納します(chunk10)。次のリストについてchunk3～9を実行し、chunk10で結合します。
+
+```{r chunk11, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+if(exists("site.total")){ #AAA.totalが存在している場合=2回目以降の実行の場合
+  before <- nrow(site.total) #統合前の行数=レコード数を取得
+    site.total <- rbind(site.total, site.comb)  #あらたに加工したリスト(AAA.comb)を全体リスト(AAA.total)に新規レコードとして追加
+  } else { #存在していない場合=最初の実行の場合
+    before <- 0  #統合前のレコード数は0
+    site.total <- site.comb #AAA.totalに遺跡地図情報+位置座標の統合リストを収納
+    }
+
+after <- nrow(site.total) #統合後の行数=レコード数
+def <- after - before
+if (exists("incr")){
+  incr <- rbind(incr, data.frame(before,after,def))
+  } else {
+    incr <- data.frame(before,after,def)
+  }
+incr #追加処理結果の表示: before=処理前のレコード数、after=処理後のレコード数、def=差分(増加数)
+
+#JASIDを整数型に
+site.total <-
+site.total %>%
+  mutate_at(vars(JASID), funs(as.integer)) %>%
+#JASIDで整列
+  arrange(JASID)
+
+#確認1:データセットの構造
+str(site.total)
+
+#JASIDの重複行があれば削除
+site.total <- distinct(site.total, JASID, .keep_all = TRUE)
+
+ # incr <- incr[-c(3),] # 行の削除
+
+```
+
+##遺跡属性の追加
+時代・
+```{r chunk12, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
 
 
+```
+
+
+##集計・概要
+統合リストから各種集計します
+```{r chunk13, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+
+
+#集計1:区市町村ごとの遺跡数
+site.st <- site.total %>%  
+  group_by(自治体コード) %>%  
+  tally() %>%  
+  arrange(desc(n))
+
+#集計2:区市町村ごと時代別
+
+#区市町村名追加
+  #自治体名の読み込み(more human readable)
+  LGC <- import("LGC_13Tokyo.csv", setclass= "tbl_df", encoding ="UTF-8" ) #LGC_13Tokyo.csv=東京都自治体コードリスト
+
+mutate(site.st,区市町村名 = "") #集計リストに区市町村名を追加
+site.st <- select(site.st,自治体コード,区市町村名,n) #列名の並べ替え
+
+ctr <- 1:nrow(site.st) #集計リストの行数を取得
+LGCcode <- select(site.st,自治体コード) #集計リストの自治体コードのみをLGCcodeに収納
+for (i in ctr){ #集計リストの行数分繰り返し処理
+  lgcc <- (LGCcode[i,1])[[1]]
+  lgname <- (select((filter(LGC,自治体コード == lgcc)),名称))[[1]]
+  site.st[i,"区市町村名"] <- lgname
+}
+
+#自治体コードでソート、表形式で表示
+site.st <- arrange(site.st, 自治体コード)
+formattable(site.st,list(n=color_bar("tomato")))
+
+```
+
+## 作業結果保存
+チャンク13までの作業結果をCSVで保存します。
+```{r chunk14, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+export(site.total, "13Tokyo_total.csv") #UTF-8書き出し, ファイル名を適宜指定(全レコード)
+export(site.st, "13Tokyo_summary.csv") #集計データ書き出し
+
+```
+
+「ひなたGIS」では座標値のないデータはエラーを出して読み込みをストップします。Googleマイマップなどでは[ヌル島](https://ja.wikipedia.org/wiki/%E3%83%8C%E3%83%AB%E5%B3%B6)が発生するので、座標値のないデータを削除して保存する必要があります。
+```{r chunk14, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+site.total.coord <- drop_na(site.total,経度)
+export(site.total.coord, "13Tokyo_totalcoord.csv")　#UTF-8書き出し, ファイル名を適宜指定(全レコード)
+
+```
 
 

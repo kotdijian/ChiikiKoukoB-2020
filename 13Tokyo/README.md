@@ -30,4 +30,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Contributors／協力者  
 * 13109_Shinagawa-ku／品川区：[@ta-niiyan](https://twitter.com/ta_niiyan)  
-* 13112_Setagaya-ku08／世田谷区8, 13217_Koganei-shi／小金井市：Atsushi Noguchi ([kotodijian](https://github.com/kotdijian) or [@fujimicho](https://twitter.com/fujimicho)  
+* 13112_Setagaya-ku08／世田谷区8, 13214_Komae-shi／狛江市, 13210_Koganei-shi／小金井市：Atsushi Noguchi ([kotodijian](https://github.com/kotdijian) or [@fujimicho](https://twitter.com/fujimicho)  
