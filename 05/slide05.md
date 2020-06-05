@@ -27,7 +27,7 @@ layout: false
 
 ### 今日のリソース
 
-* Googleドキュメント  
+* [Googleドキュメント](https://docs.google.com/document/d/1lhbKmEWhqn5ZIRcdGRPH6uIPql74TKYhm1WztlqtN-8/edit?usp=sharing)  
 
 ---
 ###### 2
@@ -123,35 +123,37 @@ layout: false
 * 複数のリストを参照、比較、統合するときに、照合、重複や欠損のチェックをどのように行なうか?  
     ☞ 分担したリストをつなげる  
     * 同じ自治体の中 ＜＞　複数の自治体をつなげる  
+--
 
-※ 親番号に遺跡登録無し、アルファベットも!!  
-]
+* 並べ替えをする、数を数える
+--
 
-.right-column[
-* 調布市の事例：遺跡内の地点?  
-
-|遺跡番号|ふりがな|  
-|--:|:--:|  
-|29-1|ませぐちいせき|  
-|29-2|ませぐちこせんしゅつどち|  
-
-※29-1が親番号?(遺跡全体?)、29-2が特定地点?  
-]
-
+* 他の情報とつなぐ
 ---
-###### 12
-## 7-2. UIDの付番・管理について(補足)  
+###### 8
+* 事後学習課題の確認  
+--
 
-* 枝番はデータベース、データ処理上、できる限り避けるべき
+### [東京都遺跡地図](https://tokyo-iseki.metro.tokyo.lg.jp/)データの一覧化 (先々週)  
+--
 
-* なぜ枝番は良くないのかを考えてみよう
-
-
-### 事後学習課題の確認  
-* [東京都遺跡地図](https://tokyo-iseki.metro.tokyo.lg.jp/)からデータのコピペ・一覧化  
-    **一覧表で提供してくれていたら便利ですよね?**  
+### [ひなたGIS](https://hgis.pref.miyazaki.lg.jp/hinata/)で分布図化 (先週)  
 
 --
+
+# お疲れさまでした!!
+* 以下にみなさんの作業成果を統合したリストをアップロードしました
+    * [13Tokyo_totalcoordSJS.csv](https://drive.google.com/file/d/1z2dn3ydc6XAXmEYDV8drwei7-kZVoAdi/view?usp=sharing)  
+--
+
+* ダウンロードして「ひなたGIS」で開いてみましょう
+--
+    * おまけ：東京学芸大学の範囲データもあります([gakugeidai.geojson](https://drive.google.com/file/d/11NdJ2e8ToNqRxOKi_FsiWUHuWWfspcly/view?usp=sharing))  
+    * (GeoJSONという形式です。点ではなく図形を地図上に示すことができます ☞ 別の回でやります)  
+
+---
+
+
 
 ### 今日のリソース
 * **Googleドキュメント第4回まとめ**  
