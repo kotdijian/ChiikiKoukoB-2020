@@ -33,17 +33,19 @@ Tidyverseとrioをインストールします。表のビジュアル化のた�
 if(!require("tidyverse")) install.packages('tidyverse', repos='http://cran.us.r-project.org') 
 if(!require("rio")) install.packages('rio', repos='http://cran.us.r-project.org')  
 if(!require("formattable")) install.packages('formattable', repos='http://cran.us.r-project.org')  
+if(!require("utf8")) install.packages("utf8", repos='http://cran.us.r-project.org')
 
 #パッケージのアクティベート
 library("tidyverse")
 library("rio")
 library("formattable")
+library("utf8")
 
 ```
 
 ---
 ## リスト・ファイル一覧および共通リスト取得
-ローカルリポジトリからCSVファイルの一覧を取得します。また自治体コード、ラベル・テンプレートを取得します。
+ローカルリポジトリからCSVファイルの一覧を取得します。ラベル・テンプレートを取得します。
 
 ```{r chunk2, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
 CsvList <- list.files(pattern = "csv") # ファイル形式がcsvであるファイルの一覧をCsvListに収納
@@ -59,20 +61,11 @@ LabelTemplate = import("ListLabel_template.csv", encoding = "UTF-8")
 ```
 
 ---
-## 統合データ収納オブジェクトと増分カウンターのリセット
-**（分割リストの統合を実行する際に、オブジェクトを空にしておくこと）**
-```{r chunk}
-if (exists("site.total")){rm(site.total)} 
-if (exists("incr")){rm(incr)}
-
-```
-
----
 ## テキストファイルのエンコード確認(確実ならスキップしても良い)
 日本語等マルチバイト文字のエンコーディングは環境・ソフトごとに異なる。TXT,CSVファイルのエンコードを確認し、読み込み時に指定する必要があります(→chunk3)。
 
 ```{r chunk3, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-guess_encoding("13112_Setagaya-ku04.csv") # ""内に確認するファイル名を入力
+guess_encoding("13208_Chofu-shi02.csv") # ""内に確認するファイル名を入力
 
 ```
 
@@ -80,7 +73,7 @@ guess_encoding("13112_Setagaya-ku04.csv") # ""内に確認するファイル名�
 ## csv読み込みと確認
 ローカルリポジトリからCSVファイルを読み込みます。
 ```{r chunk4, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-site.n <- import("13112_Setagaya-ku04.csv", setclass= "tbl_df", encoding ="UTF-8")
+site.n <- import("13208_Chofu-shi02.csv", setclass= "tbl_df", encoding ="UTF-8")
   # site.nにBBB.csvをテーブルとして(setclass = "tbl_df")読み込み
   # site.n = 読み込み先のオブジェクト名(作業用)
   # BBB = 読み込み元のファイル名(ローカルリポジトリ内なのでファイル名のみ)
@@ -126,14 +119,14 @@ colnames(site.n) #確認用
 ## _coord.csv読み込みと確認
 ローカルリポジトリから位置座標のCSVファイルを読み込みます
 ```{r chunk7, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-site.coord <- import("13112_Setagaya-ku04_coord.csv", setclass= "tbl_df", encoding ="UTF-8")
+site.coord <- import("13208_Chofu-shi02_coord.csv", setclass= "tbl_df", encoding ="UTF-8")
   # site.coordにBBB_coord.csvをテーブルとして(setclass = "tbl_df")読み込み
   # site.coord = 読み込み先のオブジェクト名(作業用)
   # BBB_coord = 読み込み元のファイル名(ローカルリポジトリ内なのでファイル名のみ)
   # encoding = "UTF-8"で文字コードを指定(シフトJISなら"CP932")
 
 # 確認用
-  head(site.n)
+  head(site.coord)
 
 ```
 
@@ -181,32 +174,33 @@ if (chk.counter == nrow(site.n)){
 
 レコード数とJASIDの一致を確認したら重複するJASIDの列を位置座標データから削除し、遺跡地図データと統合します。
 ```{r chunk10, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-site.coord <- select(site.coord,-JASID) #位置座標データからJASID列を削除
-colnames(site.coord) <- c("経度","緯度") #位置座標データのラベルの正規化
+colnames(site.coord) <- c("JASID","経度","緯度") #位置座標データのラベルの正規化
 
-site.comb <- cbind(site.n, site.coord) 
-
+site.comb <- left_join(site.n, site.coord,by = "JASID")
+  
 site.comb %>% 
   head() %>% 
   colnames()
 
 ```
 
-## 被分割リスト統合
-入力作業上の都合などにより分割されているリストを、自治体単位などで統合します。chunk9までの作業で位置座標データを統合したリストに、chunk3～9を実行した次のリストを追加していきます。
+## 【重要】遺跡リストと座標リストが1対の場合はchunk12へGO TO。分割されている場合は次のchunk11を実行。
 
-最初に、chunk9で作成した遺跡地図情報と位置座標情報の統合リストを新たなオブジェクトに収納します(chunk10)。次のリストについてchunk3～9を実行し、chunk10で結合します。
+## 被分割リスト統合
+入力作業上の都合などにより分割されているリストを、自治体単位などで統合します。chunk10までの作業で位置座標データを統合したリストに、chunk4～10を実行した次のリストを追加していきます。
+
+最初に、chun10で作成した遺跡地図情報と位置座標情報の統合リストを新たなオブジェクトに収納します(chunk11)。次のリストについてchunk3～9を実行し、chunk10で結合します。
 
 ```{r chunk11, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-if(exists("site.total")){ #AAA.totalが存在している場合=2回目以降の実行の場合
-  before <- nrow(site.total) #統合前の行数=レコード数を取得
-    site.total <- rbind(site.total, site.comb)  #あらたに加工したリスト(AAA.comb)を全体リスト(AAA.total)に新規レコードとして追加
+if(exists("site.subtotal")){ #AAA.totalが存在している場合=2回目以降の実行の場合
+  before <- nrow(site.subtotal) #統合前の行数=レコード数を取得
+    site.subtotal <- rbind(site.subtotal, site.comb)  #あらたに加工したリスト(AAA.comb)を全体リスト(AAA.subtotal)に新規レコードとして追加
   } else { #存在していない場合=最初の実行の場合
     before <- 0  #統合前のレコード数は0
-    site.total <- site.comb #AAA.totalに遺跡地図情報+位置座標の統合リストを収納
+    site.subtotal <- site.comb #AAA.totalに遺跡地図情報+位置座標の統合リストを収納
     }
 
-after <- nrow(site.total) #統合後の行数=レコード数
+after <- nrow(site.subtotal) #統合後の行数=レコード数
 def <- after - before
 if (exists("incr")){
   incr <- rbind(incr, data.frame(before,after,def))
@@ -215,50 +209,133 @@ if (exists("incr")){
   }
 incr #追加処理結果の表示: before=処理前のレコード数、after=処理後のレコード数、def=差分(増加数)
 
+```
+
+## 遺跡リストと座標リストが一対の場合＝遺跡リストと座標リストの統合だけで完了の場合
+```{r chunk12, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+rm("site.subtotal") #site.subtotalをリセット
+
+site.subtotal <- site.comb
+
+head(site.subtotal)
+
+```
+
+## 統合リストの保存(自治体単位)
+```{r chunk13, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
 #JASIDを整数型に
-site.total <-
-site.total %>%
+site.subtotal <- site.subtotal %>%
   mutate_at(vars(JASID), funs(as.integer)) %>%
 #JASIDで整列
   arrange(JASID)
 
-#確認1:データセットの構造
-str(site.total)
+#ファイル名を付けて保存
+write.csv(site.subtotal, "13208_Chofu-shiSJS.csv", row.names = FALSE, fileEncoding = "CP932") #Shift-JIS書き出しforひなたGIS
 
-#JASIDの重複行があれば削除
+```
+
+## 全体リストへの統合
+Chunk～13で作成した自治体単位のリストを全体リストに統合します。
+```{r chunk12, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+# 統合リストの読み込み
+if (exists("site.total") ==FALSE) {
+  site.total <- import("13Tokyo_total.csv",setclass = "tbl_df", encoding = "UTF-8")
+}
+# 統合率と結合
+site.total <- rbind(site.total, site.subtotal)
+
+# JASIDの重複行があれば削除
 site.total <- distinct(site.total, JASID, .keep_all = TRUE)
 
- # incr <- incr[-c(3),] # 行の削除
+#JASIDを整数型に
+site.total <- site.total %>%
+  mutate_at(vars(JASID), funs(as.integer)) %>%
+#JASIDで整列
+  arrange(JASID)
 
 ```
 
 ##遺跡属性の追加
-時代・
+時代の01ベクトルを取得（site.totalを対象）。
 ```{r chunk12, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
 
+#旧石器時代
+site.palaeolithic <- site.total %>% 
+                      filter(str_detect(時代, "旧石器時代")) %>% 
+                      mutate(旧石器時代 = "1")
 
+#縄文時代
+site.jomon <- site.total %>% 
+                      filter(str_detect(時代, "縄文時代")) %>% 
+                      mutate(縄文時代 = "1")
+
+#弥生時代
+site.yayoi <- site.total %>% 
+                      filter(str_detect(時代, "弥生時代")) %>% 
+                      mutate(弥生時代 = "1")
+
+#古墳時代
+site.kofun <- site.total %>% 
+                      filter(str_detect(時代, "古墳時代")) %>% 
+                      mutate(古墳時代 = "1")
+
+#奈良時代
+site.nara <- site.total %>% 
+                      filter(str_detect(時代, "奈良時代")) %>% 
+                      mutate(奈良時代 = "1")
+
+#平安時代
+site.heian <- site.total %>% 
+                      filter(str_detect(時代, "平安時代")) %>% 
+                      mutate(平安時代 = "1")
+
+#中世
+site.medieval <- site.total %>% 
+                      filter(str_detect(時代, "中世")) %>% 
+                      mutate(中世 = "1")
+
+#近世
+site.earlymodern <- site.total %>% 
+                      filter(str_detect(時代, "近世")) %>% 
+                      mutate(近世 = "1")
+
+#時代不明
+site.unknown <- site.total %>% 
+                      filter(str_detect(時代, "不明")) %>% 
+                      mutate(時代不明 = "1")
+
+#統合
+site.total.age <- site.total %>% 
+  select(JASID,自治体コード,遺跡名,緯度,経度) %>% 
+  left_join(select(site.palaeolithic,JASID,旧石器時代),by = "JASID") %>% 
+  left_join(select(site.jomon,JASID,縄文時代),by = "JASID") %>%
+  left_join(select(site.yayoi,JASID,弥生時代),by = "JASID") %>% 
+  left_join(select(site.kofun,JASID,古墳時代),by = "JASID") %>%
+  left_join(select(site.nara,JASID,奈良時代),by = "JASID") %>% 
+  left_join(select(site.heian,JASID,平安時代),by = "JASID") %>% 
+  left_join(select(site.medieval,JASID,中世),by = "JASID") %>% 
+  left_join(select(site.earlymodern,JASID,近世),by = "JASID") %>% 
+  left_join(select(site.unknown,JASID,時代不明),by = "JASID")
 ```
 
 
 ##集計・概要
 統合リストから各種集計します
+
+**集計1:区市町村ごとの遺跡数**
 ```{r chunk13, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-
-
-#集計1:区市町村ごとの遺跡数
 site.st <- site.total %>%  
-  group_by(自治体コード) %>%  
-  tally() %>%  
-  arrange(desc(n))
-
-#集計2:区市町村ごと時代別
-
+  group_by(自治体コード) %>%
+  tally %>% 
+  rename(合計 = n) %>% 
+  arrange(自治体コード)
+  
 #区市町村名追加
   #自治体名の読み込み(more human readable)
   LGC <- import("LGC_13Tokyo.csv", setclass= "tbl_df", encoding ="UTF-8" ) #LGC_13Tokyo.csv=東京都自治体コードリスト
 
-mutate(site.st,区市町村名 = "") #集計リストに区市町村名を追加
-site.st <- select(site.st,自治体コード,区市町村名,n) #列名の並べ替え
+site.st <- mutate(site.st,区市町村名 = "") #集計リストに区市町村名を追加
+site.st <- select(site.st,自治体コード,区市町村名,合計) #列名の並べ替え
 
 ctr <- 1:nrow(site.st) #集計リストの行数を取得
 LGCcode <- select(site.st,自治体コード) #集計リストの自治体コードのみをLGCcodeに収納
@@ -268,24 +345,297 @@ for (i in ctr){ #集計リストの行数分繰り返し処理
   site.st[i,"区市町村名"] <- lgname
 }
 
+```
+
+**時代別**
+```{r chunk14, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+#集計2:時代別
+　  # 旧石器
+  site.st2 <- site.total.age %>% 
+    group_by(自治体コード, 旧石器時代)　%>%
+    tally %>% 
+    spread(旧石器時代,n) %>% 
+    rename("旧石器" = "1") %>% 
+    select(-"<NA>")
+  site.st <- left_join(site.st, site.st2, by = "自治体コード")
+
+  # 縄文
+  site.st2 <- site.total.age %>% 
+    group_by(自治体コード, 縄文時代)　%>%
+    tally %>% 
+    spread(縄文時代,n) %>% 
+    rename("縄文" = "1") %>% 
+    select(-"<NA>")
+  site.st <- left_join(site.st, site.st2, by = "自治体コード")
+
+  # 弥生
+  site.st2 <- site.total.age %>% 
+    group_by(自治体コード, 弥生時代)　%>%
+    tally %>% 
+    spread(弥生時代,n) %>% 
+    rename("弥生" = "1") %>% 
+    select(-"<NA>")
+  site.st <- left_join(site.st, site.st2, by = "自治体コード")
+
+  # 古墳
+  site.st2 <- site.total.age %>% 
+    group_by(自治体コード, 古墳時代)　%>%
+    tally %>% 
+    spread(古墳時代,n) %>% 
+    rename("古墳" = "1") %>% 
+    select(-"<NA>")
+  site.st <- left_join(site.st, site.st2, by = "自治体コード")
+
+  # 奈良
+  site.st2 <- site.total.age %>% 
+    group_by(自治体コード, 奈良時代)　%>%
+    tally %>% 
+    spread(奈良時代,n) %>% 
+    rename("奈良" = "1") %>% 
+    select(-"<NA>")
+  site.st <- left_join(site.st, site.st2, by = "自治体コード")
+
+  # 平安
+  site.st2 <- site.total.age %>% 
+    group_by(自治体コード, 平安時代)　%>%
+    tally %>% 
+    spread(平安時代,n) %>% 
+    rename("平安" = "1") %>% 
+    select(-"<NA>")
+  site.st <- left_join(site.st, site.st2, by = "自治体コード")
+
+  # 中世
+  site.st2 <- site.total.age %>% 
+    group_by(自治体コード, 中世)　%>%
+    tally %>% 
+    spread(中世,n) %>% 
+    rename("中世" = "1") %>% 
+    select(-"<NA>")
+  site.st <- left_join(site.st, site.st2, by = "自治体コード")
+
+  # 近世
+  site.st2 <- site.total.age %>% 
+    group_by(自治体コード, 近世)　%>%
+    tally %>% 
+    spread(近世,n) %>% 
+    rename("近世" = "1") %>% 
+    select(-"<NA>")
+  site.st <- left_join(site.st, site.st2, by = "自治体コード")
+
+  # 時代不明
+  site.st2 <- site.total.age %>% 
+    group_by(自治体コード, 時代不明)　%>%
+    tally %>% 
+    spread(時代不明,n) %>% 
+    rename("時代不明" = "1") %>% 
+    select(-"<NA>")
+  site.st <- left_join(site.st, site.st2, by = "自治体コード")
+  
+  # NAを0に置換
+  site.st[is.na(site.st)] <- 0
+  
+  # 水系リストを読み込み・結合
+  river <- import("13Tokyo_river.csv", setclass = "tbl_df", encoding="UTF-8")
+  site.stable <- site.st %>% 
+    inner_join(river, by = "自治体コード") %>% 
+    select("水系", "配列", "自治体コード", "名称", "合計", "旧石器", "縄文", "弥生", "古墳", "奈良", "平安", "中世", "近世", "時代不明")
+  
+  
+# 表形式で表示
+  #自治体コードでソート、
+  # site.stable <- arrange(site.st, 自治体コード)
+  
+  #河川水系でソート
+  site.stable <- arrange(site.stable, 配列)
+  
+  #formattableで表出力
+  formattable(site.stable,list(合計=color_bar("tomato"),
+                           旧石器=color_bar("blue"),
+                           縄文=color_bar("brown"),
+                           弥生=color_bar("orange"),
+                           古墳=color_bar("green"),
+                           奈良=color_bar("purple"),
+                           平安=color_bar("yellow"),
+                           中世=color_bar("pink"),
+                           近世=color_bar("skyblue"),
+                           時代不明=color_bar("lightgrey")))
+
+```
+
+**時代別**
+```{r chunk15, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+#集計2:遺跡種別
+  # ベースリスト
+site.sp <- select(site.st,自治体コード,区市町村名)
+
+  # 縄文貝塚
+  site.st2 <- site.total %>%
+    filter(str_detect(種別, "貝塚")) %>% 
+    group_by(自治体コード)　%>%
+    tally %>% 
+    rename("貝塚" = "n")
+  site.sp <- left_join(site.sp, site.st2, by = "自治体コード")
+  
+  # 古墳
+  site.st2 <- site.total %>% 
+    filter(str_detect(種別,"古墳")) %>% 
+    group_by(自治体コード) %>% 
+    tally %>% 
+    rename("古墳" = "n")
+  site.sp <- left_join(site.sp, site.st2, by = "自治体コード")
+  
+  # 横穴墓
+  site.st2 <- site.total %>% 
+    filter(str_detect(種別,"横穴墓")) %>% 
+    group_by(自治体コード) %>% 
+    tally %>% 
+    rename("横穴墓" = "n")
+  site.sp <- left_join(site.sp, site.st2, by = "自治体コード")
+  
+  # 社寺
+  site.st2 <- site.total %>% 
+    filter(str_detect(種別,"社寺")) %>% 
+    group_by(自治体コード) %>% 
+    tally %>% 
+    rename("社寺" = "n")
+  site.sp <- left_join(site.sp, site.st2, by = "自治体コード")
+  
+  # 城跡
+  site.st2 <- site.total %>% 
+    filter(str_detect(種別,"城館")) %>% 
+    group_by(自治体コード) %>% 
+    tally %>% 
+    rename("城館" = "n")
+  site.sp <- left_join(site.sp, site.st2, by = "自治体コード")
+  
+  # 塚
+  site.st2 <- site.total %>% 
+    filter(str_detect(種別,"塚")) %>% 
+    group_by(自治体コード) %>% 
+    tally %>% 
+    rename("塚" = "n")
+  site.sp <- left_join(site.sp, site.st2, by = "自治体コード")
+
+  # NAを0に置換
+  site.sp[is.na(site.sp)] <- 0
+  
+   # 水系リストを読み込み・結合
+  river <- import("13Tokyo_river.csv", setclass = "tbl_df", encoding="UTF-8")
+  site.sp <- site.sp %>% 
+    inner_join(river, by = "自治体コード") %>% 
+    select("水系", "配列", "自治体コード", "名称", "貝塚", "古墳", "横穴墓", "社寺", "城館", "塚")
+  
+  #自治体コードでソート、表形式で表示
+  # site.sp <- arrange(site.sp, 自治体コード)
+  
+  #河川水系でソート
+  site.sp <- arrange(site.sp, 配列)
+  
+  #formattableで表出力
+  formattable(site.sp,list(貝塚=color_bar("blue"),
+                           古墳=color_bar("green"),
+                           社寺=color_bar("orange"),
+                           城館=color_bar("red"),
+                           塚=color_bar("purple"),
+                           横穴墓=color_bar("brown")
+                           )
+            )
+
+```
+
+```{r chunk16, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+#集計3:集落・住居
+  # ベースリスト
+site.stl <- select(site.st,自治体コード,区市町村名)
+site.stl0 <- site.total
+rename(site.stl0, "遺構" <- '主な遺構/概要')
+site.stl0$`主な遺構/概要` %>% 
+              str_replace_all(pattern = \6005b,replacement="") %>% 
+              str_replace_all(pattern = \6005d, replacement="")
+test <- select(site.stl0,"主な遺構/概要")
+rename(test, "遺構" = "主な遺構/概要")
+charToRaw(colnames(test))
+charToRaw("主な")
+# 旧石器ブロック
+  site.st2 <- site.stl0%>% 
+    filter(str_detect(時代,"旧石器時代")) %>% 
+    filter(str_detect(遺構,"ブロック")) %>% 
+    group_by(自治体コード) %>%
+    tally %>% 
+    rename("旧石器ブロック" = "n")
+  site.stl <- left_join(site.stl, site.st2, by = "自治体コード")
+
+  # 旧石器ユニット
+  site.st2 <- site.stl0%>% 
+    filter(str_detect(時代,"旧石器時代")) %>% 
+    filter(str_detect(遺構,"ユニット")) %>% 
+    group_by(自治体コード) %>%
+    tally %>% 
+    rename("旧石器ユニット" = "n")
+  site.stl <- left_join(site.stl, site.st2, by = "自治体コード")
+
+  # 旧石器礫群
+  site.st2 <- site.stl0%>% 
+    filter(str_detect(時代,"旧石器時代")) %>% 
+    filter(str_detect(遺構,"礫群")) %>% 
+    group_by(自治体コード) %>%
+    tally %>% 
+    rename("旧石器礫群" = "n")
+  site.stl <- left_join(site.stl, site.st2, by = "自治体コード")
+
+  # 縄文時代住居
+  site.st2 <- site.stl0%>% 
+    filter(str_detect(遺構,'[縄文時代]住居')) %>% 
+    group_by(自治体コード) %>%
+    tally %>% 
+    rename("縄文住居" = "n")
+  site.stl <- left_join(site.stl, site.st2, by = "自治体コード")
+  
+  # NAを0に置換
+  site.stl[is.na(site.stl)] <- 0
+  
 #自治体コードでソート、表形式で表示
-site.st <- arrange(site.st, 自治体コード)
-formattable(site.st,list(n=color_bar("tomato")))
+site.stl <- arrange(site.stl, 自治体コード)
+# formattable(site.st,list(合計=color_bar("tomato"),
+                           旧石器=color_bar("blue"),
+                           縄文=color_bar("brown"),
+                           弥生=color_bar("orange"),
+                           古墳=color_bar("green"),
+                           奈良=color_bar("purple"),
+                           平安=color_bar("yellow"),
+                           中世=color_bar("pink"),
+                           近世=color_bar("skyblue"),
+                           時代不明=color_bar("lightgrey")))
 
 ```
 
 ## 作業結果保存
-チャンク13までの作業結果をCSVで保存します。
-```{r chunk14, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-export(site.total, "13Tokyo_total.csv") #UTF-8書き出し, ファイル名を適宜指定(全レコード)
-export(site.st, "13Tokyo_summary.csv") #集計データ書き出し
+チャンク15までの作業結果をCSVで保存します。
+```{r chunk16, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+write_csv(site.total, "13Tokyo_total.csv", row.names = FALSE, fileencoding = "UTF-8") #UTF-8書き出し, ファイル名を適宜指定(全レコード)
+write.csv(site.st, "13Tokyo_summary.csv", row.names = FALSE, fileEncoding = "UTF-8") #集計データ書き出し
+write.csv(site.sp, "13Tokyo_sitetype.csv", row.names =FALSE, fileEncoding = "UTF-8")
 
+#時代別データ書き出し
+write.csv(site.palaeolithic, "13Tokyo_total_palaeolithic.csv", row.names=FALSE, fileEncoding = "UTF-8")
+export(site.jomon, "13Tokyo_total_jomon.csv")
+export(site.yayoi, "13Tokyo_total_yayoi.csv")
+export(site.kofun, "13Tokyo_total_kofun.csv")
+export(site.nara, "13Tokyo_total_nara.csv")
+export(site.heian, "13Tokyo_total_heian.csv")
+export(site.medieval, "13Tokyo_total_medieval.csv")
+export(site.earlymodern, "13Tokyo_total_earlymodern.csv")
+export(site.unknown, "13Tokyo_total_unknown.csv")
+# site.test <- mutate(site.palaeolithic,テスト="テスト")
+# Encoding(colnames(site.test))
+# site.test <- mutate()
+# site.test <- import("13Tokyo_total_palaeolithic.csv",encoding="UTF-8")
 ```
 
 「ひなたGIS」では座標値のないデータはエラーを出して読み込みをストップします。Googleマイマップなどでは[ヌル島](https://ja.wikipedia.org/wiki/%E3%83%8C%E3%83%AB%E5%B3%B6)が発生するので、座標値のないデータを削除して保存する必要があります。
 ```{r chunk14, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
 site.total.coord <- drop_na(site.total,経度)
-export(site.total.coord, "13Tokyo_totalcoord.csv")　#UTF-8書き出し, ファイル名を適宜指定(全レコード)
+write.csv(site.total.coord, "13Tokyo_totalcoord.csv", row.names = FALSE, fileEncoding = "CP932")　#Shift-JIS書き出し, ファイル名を適宜指定(全レコード)
 
 ```
 

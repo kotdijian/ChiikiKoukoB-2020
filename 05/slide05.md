@@ -4,8 +4,8 @@ class: center, middle, inverse
 
 ---
 # 考古学における地域研究 
-地域考古学B-2020年度第4回目
-2020/5/29
+地域考古学B-2020年度第5回目
+2020/6/5
 [授業ページトップに戻る](https://kotdijian.github.io/ChiikiKoukoB-2020/)
 
 ---
@@ -14,9 +14,17 @@ layout: false
 ### 前回までの振り返り
 * 考古学資料・情報を集める ＞ 文献一覧  
 * 分布図作成の準備 ＞ 位置情報の収集  
-* 「[ひなたGIS](https://hgis.pref.miyazaki.lg.jp/hinata/hinata.html)」を使って分布図を作成しよう ＜ ここから  
+* 「[ひなたGIS](https://hgis.pref.miyazaki.lg.jp/hinata/hinata.html)」を使って分布図を作成しよう  
 
 --
+### ここまでやったこと  
+* 考古学における地域研究のための、いくつかの異なる情報を収集する
+* 分布図の作成に必要な情報と手順を理解する  
+
+---
+###### 2
+### ようやくやろうとしていることがみえてきたでしょうか?
+
 
 ### 事後学習課題の確認  
 * [東京都遺跡地図](https://tokyo-iseki.metro.tokyo.lg.jp/)からデータのコピペ・一覧化  
