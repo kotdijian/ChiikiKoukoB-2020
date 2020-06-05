@@ -65,7 +65,7 @@ LabelTemplate = import("ListLabel_template.csv", encoding = "UTF-8")
 日本語等マルチバイト文字のエンコーディングは環境・ソフトごとに異なる。TXT,CSVファイルのエンコードを確認し、読み込み時に指定する必要があります(→chunk3)。
 
 ```{r chunk3, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-guess_encoding("13208_Chofu-shi02.csv") # ""内に確認するファイル名を入力
+guess_encoding("13111_Ota-ku.csv") # ""内に確認するファイル名を入力
 
 ```
 
@@ -73,7 +73,7 @@ guess_encoding("13208_Chofu-shi02.csv") # ""内に確認するファイル名を
 ## csv読み込みと確認
 ローカルリポジトリからCSVファイルを読み込みます。
 ```{r chunk4, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-site.n <- import("13208_Chofu-shi02.csv", setclass= "tbl_df", encoding ="UTF-8")
+site.n <- import("13111_Ota-ku.csv", setclass= "tbl_df", encoding ="UTF-8")
   # site.nにBBB.csvをテーブルとして(setclass = "tbl_df")読み込み
   # site.n = 読み込み先のオブジェクト名(作業用)
   # BBB = 読み込み元のファイル名(ローカルリポジトリ内なのでファイル名のみ)
@@ -117,9 +117,9 @@ colnames(site.n) #確認用
 
 ---
 ## _coord.csv読み込みと確認
-ローカルリポジトリから位置座標のCSVファイルを読み込みます
+ローカルリポジトリから位置座標のCSVファイルを読み込みます。経度・緯度のデータの型=<dbl>と書式を確認すること。
 ```{r chunk7, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-site.coord <- import("13208_Chofu-shi02_coord.csv", setclass= "tbl_df", encoding ="UTF-8")
+site.coord <- import("13111_Ota-ku_coord.csv", setclass= "tbl_df", encoding ="UTF-8")
   # site.coordにBBB_coord.csvをテーブルとして(setclass = "tbl_df")読み込み
   # site.coord = 読み込み先のオブジェクト名(作業用)
   # BBB_coord = 読み込み元のファイル名(ローカルリポジトリ内なのでファイル名のみ)
@@ -230,7 +230,7 @@ site.subtotal <- site.subtotal %>%
   arrange(JASID)
 
 #ファイル名を付けて保存
-write.csv(site.subtotal, "13208_Chofu-shiSJS.csv", row.names = FALSE, fileEncoding = "CP932") #Shift-JIS書き出しforひなたGIS
+write.csv(site.subtotal, "13111_Ota-kuSJS.csv", row.names = FALSE, fileEncoding = "CP932") #Shift-JIS書き出しforひなたGIS
 
 ```
 
@@ -609,24 +609,21 @@ site.stl <- arrange(site.stl, 自治体コード)
 ## 作業結果保存
 チャンク15までの作業結果をCSVで保存します。
 ```{r chunk16, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-write_csv(site.total, "13Tokyo_total.csv", row.names = FALSE, fileencoding = "UTF-8") #UTF-8書き出し, ファイル名を適宜指定(全レコード)
-write.csv(site.st, "13Tokyo_summary.csv", row.names = FALSE, fileEncoding = "UTF-8") #集計データ書き出し
-write.csv(site.sp, "13Tokyo_sitetype.csv", row.names =FALSE, fileEncoding = "UTF-8")
+write.csv(site.total, "13Tokyo_total.csv", row.names = FALSE) #UTF-8書き出し, ファイル名を適宜指定(全レコード)
+write.csv(site.st, "13Tokyo_summary.csv", row.names = FALSE) #集計データ書き出し
+write.csv(site.sp, "13Tokyo_sitetype.csv", row.names =FALSE) #集計データ(種別)書き出し
 
 #時代別データ書き出し
-write.csv(site.palaeolithic, "13Tokyo_total_palaeolithic.csv", row.names=FALSE, fileEncoding = "UTF-8")
-export(site.jomon, "13Tokyo_total_jomon.csv")
-export(site.yayoi, "13Tokyo_total_yayoi.csv")
-export(site.kofun, "13Tokyo_total_kofun.csv")
-export(site.nara, "13Tokyo_total_nara.csv")
-export(site.heian, "13Tokyo_total_heian.csv")
-export(site.medieval, "13Tokyo_total_medieval.csv")
-export(site.earlymodern, "13Tokyo_total_earlymodern.csv")
-export(site.unknown, "13Tokyo_total_unknown.csv")
-# site.test <- mutate(site.palaeolithic,テスト="テスト")
-# Encoding(colnames(site.test))
-# site.test <- mutate()
-# site.test <- import("13Tokyo_total_palaeolithic.csv",encoding="UTF-8")
+write.csv(site.palaeolithic, "13Tokyo_total_palaeolithic.csv", row.names=FALSE)
+write.csv(site.jomon, "13Tokyo_total_jomon.csv", row.names=FALSE)
+write.csv(site.yayoi, "13Tokyo_total_yayoi.csv", row.names=FALSE)
+write.csv(site.kofun, "13Tokyo_total_kofun.csv", row.names=FALSE)
+write.csv(site.nara, "13Tokyo_total_nara.csv", row.names=FALSE)
+write.csv(site.heian, "13Tokyo_total_heian.csv", row.names=FALSE)
+write.csv(site.medieval, "13Tokyo_total_medieval.csv", row.names=FALSE)
+write.csv(site.earlymodern, "13Tokyo_total_earlymodern.csv", row.names=FALSE)
+write.csv(site.unknown, "13Tokyo_total_unknown.csv", row.names=FALSE)
+
 ```
 
 「ひなたGIS」では座標値のないデータはエラーを出して読み込みをストップします。Googleマイマップなどでは[ヌル島](https://ja.wikipedia.org/wiki/%E3%83%8C%E3%83%AB%E5%B3%B6)が発生するので、座標値のないデータを削除して保存する必要があります。
