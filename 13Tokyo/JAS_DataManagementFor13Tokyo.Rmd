@@ -548,14 +548,11 @@ site.sp <- select(site.st,自治体コード,区市町村名)
   # ベースリスト
 site.stl <- select(site.st,自治体コード,区市町村名)
 site.stl0 <- site.total
-rename(site.stl0, "遺構" <- '主な遺構/概要')
-site.stl0$`主な遺構/概要` %>% 
-              str_replace_all(pattern = \6005b,replacement="") %>% 
-              str_replace_all(pattern = \6005d, replacement="")
-test <- select(site.stl0,"主な遺構/概要")
-rename(test, "遺構" = "主な遺構/概要")
-charToRaw(colnames(test))
-charToRaw("主な")
+site.stl0 <- site.stl0 %>% 
+  rename_("遺構" = ~`主な遺構/概要`) 
+  str_remove(pattern = "\\[") %>% 
+  str_remove(pattern = "\\]")
+
 # 旧石器ブロック
   site.st2 <- site.stl0%>% 
     filter(str_detect(時代,"旧石器時代")) %>% 
