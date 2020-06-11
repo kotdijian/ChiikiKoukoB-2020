@@ -23,12 +23,6 @@ layout: false
 * 考古学における地域研究のための、いくつかの異なる情報を収集する  
 * 分布図の作成に必要な情報と手順を理解する  
 
---
-
-### 今日のリソース
-
-* [Googleドキュメント](https://docs.google.com/document/d/1lhbKmEWhqn5ZIRcdGRPH6uIPql74TKYhm1WztlqtN-8/edit?usp=sharing)  
-
 ---
 ###### 2
 ### ようやくやろうとしていることがみえてきたでしょうか?

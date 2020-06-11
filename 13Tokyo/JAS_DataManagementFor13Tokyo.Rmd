@@ -618,6 +618,104 @@ site.sp <- select(site.st,自治体コード,区市町村名)
 
 ```
 
+**縄文大別別時期別**
+```{r chunk19, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+#集計3:縄文時期別
+
+  #  草創期
+site.JIncp <- site.jomon %>%
+  select(JASID, 時代, 経度, 緯度) %>% 
+  filter(str_detect(時代, "草創期")) %>% 
+    mutate(草創期=1)
+
+  # 早期
+site.JI <- site.jomon %>%
+  select(JASID, 時代, 経度, 緯度) %>% 
+  filter(str_detect(時代,"早期")|str_detect(時代,"草創期～前期")|str_detect(時代,"草創期～中期")|str_detect(時代,"草創期～後期")|str_detect(時代,"草創期～晩期")) %>% 
+    mutate(早期=1)
+    
+  # 前期
+site.JE <- site.jomon %>%
+  select(JASID, 時代, 経度, 緯度) %>% 
+  filter(str_detect(時代,"前期")|str_detect(時代,"草創期～中期")|str_detect(時代,"草創期～後期")|str_detect(時代,"草創期～晩期")|str_detect(時代,"早期～中期")|str_detect(時代,"早期～後期")|str_detect(時代,"早期～晩期")) %>%
+   mutate(前期=1)
+    
+  # 中期
+site.JM <- site.jomon %>%
+  select(JASID, 時代, 経度, 緯度) %>% 
+  filter(str_detect(時代,"中期")|str_detect(時代,"草創期～後期")|str_detect(時代,"草創期～晩期")|str_detect(時代,"早期～後期")|str_detect(時代,"早期～晩期")|str_detect(時代,"前期～後期")|str_detect(時代,"前期～晩期")) %>% 
+    mutate(中期=1)
+
+  # 後期
+site.JL <- site.jomon %>%
+  select(JASID, 時代, 経度, 緯度) %>% 
+  filter(str_detect(時代,"後期")|str_detect(時代,"草創期～晩期")|str_detect(時代,"早期～晩期")|str_detect(時代,"前期～晩期")|str_detect(時代,"中期～晩期")) %>% 
+    mutate(後期=1)
+
+  # 晩期
+site.JF <- site.jomon %>%
+  select(JASID, 時代, 経度, 緯度) %>% 
+  filter(str_detect(時代,"晩期")) %>% 
+    mutate(晩期=1)
+
+  # NAを0に置換
+  site.sp[is.na(site.sp)] <- 0
+  
+#統合
+site.J2 <- filter(site.total.age, 縄文時代 ==1)
+site.J2 <- left_join(site.J2,select(site.total, JASID, 時代), by ="JASID")
+site.J2 <- site.J2 %>% 
+  select(JASID, 自治体コード, 遺跡名, 時代, 緯度, 経度) %>% 
+  left_join(select(site.JIncp, JASID, 草創期),by = "JASID") %>% 
+  left_join(select(site.JI, JASID, 早期),by = "JASID") %>% 
+  left_join(select(site.JE, JASID, 前期),by = "JASID") %>% 
+  left_join(select(site.JM, JASID, 中期),by = "JASID") %>% 
+  left_join(select(site.JL, JASID, 後期),by = "JASID") %>% 
+  left_join(select(site.JF, JASID, 晩期),by = "JASID")
+site.J2<-mutate_all(site.J2,funs(ifelse(is.na(.),0,.)))
+
+#データ書き出し
+write.csv(site.J2,"13Tokyo_total_jomonPeriod.csv",row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(site.J2,"13Tokyo_total_jomonPeriodSJS.csv",row.names = FALSE, fileEncoding = "CP932")
+write.csv(site.JIncp,"13Tokyo_total_jomonIncp.csv",row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(site.J2,"13Tokyo_total_jomonIncpSJS.csv",row.names = FALSE, fileEncoding = "CP932")
+write.csv(site.JI,"13Tokyo_total_jomonI.csv",row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(site.JI,"13Tokyo_total_jomonISJS.csv",row.names = FALSE, fileEncoding = "CP932")
+write.csv(site.JE,"13Tokyo_total_jomonE.csv",row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(site.JE,"13Tokyo_total_jomonESJS.csv",row.names = FALSE, fileEncoding = "CP932")
+write.csv(site.JM,"13Tokyo_total_jomonM.csv",row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(site.JM,"13Tokyo_total_jomonMSJS.csv",row.names = FALSE, fileEncoding = "CP932")
+write.csv(site.JL,"13Tokyo_total_jomonL.csv",row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(site.JL,"13Tokyo_total_jomonLSJS.csv",row.names = FALSE, fileEncoding = "CP932")
+write.csv(site.JF,"13Tokyo_total_jomonF.csv",row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(site.JF,"13Tokyo_total_jomonFSJS.csv",row.names = FALSE, fileEncoding = "CP932")
+
+
+# 水系リストを読み込み・結合
+  river <- import("13Tokyo_river.csv", setclass = "tbl_df", encoding="UTF-8")
+  site.sp <- site.sp %>% 
+    inner_join(river, by = "自治体コード") %>% 
+    select("水系", "配列", "自治体コード", "名称", "貝塚", "方形周溝墓", "古墳", "横穴墓", "社寺", "城館", "塚")
+  
+  #自治体コードでソート、表形式で表示
+  # site.sp <- arrange(site.sp, 自治体コード)
+  
+  #河川水系でソート
+  site.sp <- arrange(site.sp, 配列)
+  
+  #formattableで表出力
+  formattable(site.sp,list(貝塚=color_bar("blue"),
+                           方形周溝墓=color_bar("orange"),
+                           古墳=color_bar("green"),
+                           社寺=color_bar("yellow"),
+                           城館=color_bar("red"),
+                           塚=color_bar("purple"),
+                           横穴墓=color_bar("brown")
+                           )
+            )
+
+```
+
 ```{r chunk19, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
 #集計3:集落・住居
   # ベースリスト
