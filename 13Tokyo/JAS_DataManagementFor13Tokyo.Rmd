@@ -921,3 +921,10 @@ site.unknown <- drop_na(site.unknown,経度)
 write.csv(site.unknown, "13Tokyo_total_unknownSJS.csv", row.names=FALSE, fileEncoding = "CP932")
 
 ```
+
+```{r}
+site.ttt <- site.total2 %>%
+              filter(近世 == 1) %>% 
+              mutate(色 = "lightblue")
+write.csv(site.ttt,"13Tokyo_Tamagawa_earlymodern.csv", row.names = FALSE, fileEncoding = "CP932")
+```
