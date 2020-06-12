@@ -1,0 +1,127 @@
+---
+title: "JAS_DataManagementFor13Tokyo"
+author: "kotdijian"
+date: "2020年6月7日"
+output:
+  pdf_document:
+       latex_engine: xelatex 
+  html_document: default
+  word_document: default
+documentclass: bxjsarticle
+classoption: xelatex,ja=standard
+geometry: no
+---
+
+```{r setup, include=FALSE}
+library("knitr")
+knitr::opts_chunk$set(echo = TRUE)
+Sys.setlocale("LC_ALL","Japanese") #Windowsにおけるエンコード問題解決用
+```
+
+
+```{r}
+site.Tokyo <- import("13Tokyo_total.csv", setclass= "tbl_df", encoding = "UTF-8")
+sitrepsum <- import("pref_sites.tsv", setclass = "tbl_df", encoding = "UTF-8")
+sitrepmain <- import("self_site_overviews (1).tsv", setclass = "tbl_df", encoding = "UTF-8")
+sitreppub <- import("pref_reports.tsv", setclass = "tbl_df", encoding = "UTF-8")
+  sitreppub <- sitreppub %>% 
+    rename("編集機関" = "編集機関1|編集機関2|編集機関3") %>% 
+    rename("発行機関" = "発行機関1|発行機関2|発行機関3") %>% 
+    mutate(発行年 = str_sub(発行年月日, start = 1, end = 4))
+
+```
+
+```{r}
+#都遺跡地図からの抽出
+site.Kunitachi <- site.Tokyo %>% 
+  filter(自治体コード == 13215) %>% 
+  select(JASID, 遺跡名, 遺跡番号) %>% 
+  rename("遺跡" = "遺跡名")
+
+#抄録概要の抽出
+siterp.Kunitachi <- sitrepsum %>% 
+  rename("自治体コード" = "市町村コード") %>% 
+  filter(自治体コード == 13215)
+
+  #抄録+都遺跡地図(JASID+遺跡名)
+    site.rep.Kunitachi <- left_join(siterp.Kunitachi, site.Kunitachi, by = "遺跡番号")
+    site.rep.Kunitachi <- site.rep.Kunitachi %>% 
+      arrange(JASID) %>%
+      select(JASID, 遺跡, everything())
+
+#抄録詳細の抽出
+site.ov.Kunitachi <- sitrepmain %>% 
+  rename("種別" = "時代|時代", "時代" = "種別|種別", "主な遺構" = "主な遺構|主な遺構", "主な遺物" = "主な遺物|主な遺物", "特記事項" = "特記事項|特記事項") %>% 
+  select(総覧抄録ID, 時代, 種別, 主な遺構, 主な遺物, 特記事項) 
+
+  #+抄録詳細
+    site.sum.Kunitachi <- left_join(site.rep.Kunitachi, site.ov.Kunitachi, by = "総覧抄録ID") 
+  #+総覧書誌情報(by_総覧ID)
+    sitreppub2 <- select(sitreppub, 総覧ID, 書名, 発行年, 編集機関, 発行機関)
+    site.rep.Kunitachi <- left_join(site.rep.Kunitachi, sitreppub2, by = "総覧ID")
+    site.sum.Kunitachi <- left_join(site.sum.Kunitachi, sitreppub2, by = "総覧ID")
+    
+
+```
+
+```{r}
+#総覧ID集計
+st.rep.Kunitachi <- site.rep.Kunitachi %>% 
+  group_by(総覧ID) %>% 
+  tally() %>% 
+  rename("収録遺跡・地点合計" = "n")
+
+#JASID-総覧ID集計(遺跡単位の総覧IDの合計)
+st.rep2.Kunitachi <- site.rep.Kunitachi %>% 
+  group_by(総覧ID, JASID, 遺跡) %>% 
+  tally() %>% 
+  spread(総覧ID, n)
+
+#総覧抄録ID集計
+st.sum.Kunitachi <- site.sum.Kunitachi %>% 
+  group_by(JASID, 遺跡) %>% 
+  tally() %>% 
+  rename("総覧抄録ID合計" = "n")
+
+#JASID-総覧抄録ID集計(遺跡台帳単位の抄録IDの合計)
+st.sum2.Kunitachi <- site.sum.Kunitachi %>% 
+  group_by(JASID, 遺跡, 総覧抄録ID) %>% 
+  tally() %>% 
+  spread(総覧抄録ID,n)
+
+#JASID-発行年集計(by_総覧ID)
+st.pubyear.Kunitachi <- site.rep.Kunitachi %>% 
+  group_by(JASID, 遺跡, 発行年) %>% 
+  tally() %>% 
+  spread(発行年, n)
+
+#JASID-編集機関集計
+st.ed.Kunitachi <- site.rep.Kunitachi %>% 
+  group_by(JASID, 遺跡, 編集機関) %>% 
+  tally() %>% 
+  spread(編集機関, n)
+
+#JASID-発行機関集計
+st.pub.Kunitachi <- site.rep.Kunitachi %>% 
+  group_by(JASID, 遺跡, 発行機関) %>% 
+  tally() %>% 
+  spread(発行機関, n)
+
+#編集機関-発行機関集計
+st.pub2.Kunitachi <- site.rep.Kunitachi %>% 
+  group_by(編集機関, 発行機関) %>% 
+  tally() %>% 
+  spread(発行機関, n)
+
+```
+
+```{r}
+write.csv(st.rep.Kunitachi, "strep_13215Kunitachi.csv",fileEncoding = "UTF-8")
+write.csv(st.rep2.Kunitachi, "strep2_13215Kunitachi.csv",fileEncoding = "UTF-8")
+write.csv(st.sum.Kunitachi, "stsum_13215Kunitachi.csv",fileEncoding = "UTF-8")
+write.csv(st.sum2.Kunitachi, "stsum2_13215Kunitachi.csv",fileEncoding = "UTF-8")
+write.csv(st.age.Kunitachi, "stage_13215Kunitachi.csv",fileEncoding = "UTF-8")
+write.csv(st.age2.Kunitachi, "stage2_13215Kunitachi.csv",fileEncoding = "UTF-8")
+
+```
+
