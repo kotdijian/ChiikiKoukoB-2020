@@ -422,8 +422,9 @@ for (i in ctr){ #集計リストの行数分繰り返し処理
 #集計2:時代別
   #必要ならリスト読み込み
 if (exists("site.total.age") ==FALSE) {
-  site.total <- import("13Tokyo_totalAge.csv",setclass = "tbl_df", encoding = "UTF-8")
+  site.total.age <- import("13Tokyo_totalAge.csv",setclass = "tbl_df", encoding = "UTF-8")
 }
+
 
 　  # 旧石器
   site.st2 <- site.total.age %>% 
