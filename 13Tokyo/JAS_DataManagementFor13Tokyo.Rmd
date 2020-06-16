@@ -310,11 +310,8 @@ if (exists("site.subtotal")){
 }
 
 # JASIDの重複行があれば削除
-site.total <- distinct(site.total, JASID, .keep_all = TRUE)
-
-#JASIDを整数型に
-site.total <- site.total %>%
-  mutate_at(vars(JASID), funs(as.integer)) %>%
+site.total <- site.total %>% 
+  distinct(site.total, JASID, .keep_all = TRUE) %>% 
 #JASIDで整列
   arrange(JASID)
 
@@ -380,8 +377,14 @@ site.total.age <- site.total %>%
   left_join(dplyr::select(site.heian,JASID,平安時代),by = "JASID") %>% 
   left_join(dplyr::select(site.medieval,JASID,中世),by = "JASID") %>% 
   left_join(dplyr::select(site.earlymodern,JASID,近世),by = "JASID") %>% 
-  left_join(dplyr::select(site.unknown,JASID,時代不明),by = "JASID")
-site.total.age<-mutate_all(site.total.age,funs(ifelse(is.na(.),0,.)))
+  left_join(dplyr::select(site.unknown,JASID,時代不明),by = "JASID") %>% 
+  replace_na(list(旧石器時代 =0, 縄文時代 =0, 弥生時代 = 0, 古墳時代 = 0, 奈良時代 = 0, 平安時代 = 0,  中世 = 0, 近世 = 0, 時代不明 = 0))
+
+#JASIDを整数型に
+site.total.age <- site.total.age %>%
+  mutate_at(vars(JASID), funs(as.integer64)) %>%
+#JASIDで整列
+  arrange(JASID)
 
 #site.totalにも追加
 # site.total <- left_join(site.total,dplyr::select(site.total.age,-自治体コード, -遺跡名, -緯度, -経度),by = "JASID")
