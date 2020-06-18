@@ -4,42 +4,58 @@ class: center, middle, inverse
 
 ---
 # 考古学における地域研究 
-地域考古学B-2020年度第6回目
-2020/6/12
+地域考古学B-2020年度第7回目
+2020/6/19
 [授業ページトップに戻る](https://kotdijian.github.io/ChiikiKoukoB-2020/)
 
 ---
 layout: false
 ###### 1
 ### 前回の振り返り
-* 「[ひなたGIS](https://hgis.pref.miyazaki.lg.jp/hinata/hinata.html)」を使って分布図を作成してみた  
-
+* 地図作成のさまざまな方法を確認した  
+    * ひなたGIS  
+    * 地理院地図  
+    * GoogleEarth  
 --
 
-### 今日のリソース
-
-* [Googleドキュメント](https://docs.google.com/document/d/1lhbKmEWhqn5ZIRcdGRPH6uIPql74TKYhm1WztlqtN-8/edit?usp=sharing)  
+### 事後学習課題
+* 各自でテーマを決めて主題図を作成する  
+* 作成した主題図から読み取れたことをまとめる   
+    * [まとめた内容はこちらから](https://docs.google.com/document/d/1oKuKq1ya3_haq1b_rWcXnt-aUsBETPwofgmWjbTWX_c/edit?usp=sharing)  
 
 ---
 ###### 2
-### 前回のおさらい：作成したデータをひなたGISで表示しよう  
-
-* みなさんの入力データにもとづいて統合リストを作成しました  
-    **☞ 13Tokyo_totalcoordSJS.csvを開いてみよう**  
-    * データ量が大きく動作が重い場合は、ポイントを右クリック→ファイル→サーバーに保存  
-    * うまく開けない人は[こちら](https://bit.ly/2MRgWYk) 
-    * またはhttps://bit.ly/2MRgWYkを入力
-    * gakugeidai.geojsonも開いてみよう
+### 本日の実習：さまざまな考古学データベースを探してみよう  
 
 --
 
-### 地理情報との重ね合わせ
+* [Googleドキュメント](https://docs.google.com/document/d/1oKuKq1ya3_haq1b_rWcXnt-aUsBETPwofgmWjbTWX_c/edit?usp=sharing)  
+---
+###### 3
+### 1. 日本列島の旧石器時代遺跡データベース  
+* [日本旧石器学会](http://palaeolithic.jp/data/index.htm)
+    * 「[ひなたGIS](https://hgis.pref.miyazaki.lg.jp/)」に収録されています  
+    * 東京都のデータを[Googleスプレッドシート](https://docs.google.com/spreadsheets/d/1HyqVvwygL5keQWXzetahNST33-t_nw9gJpTtsz9Z3fE/edit?usp=sharing)に読み込みました  
 
-* 「背景」から背景レイヤーを変更してみよう  
-    * 地理院_単色地図  
-    * 地理院_色別標高図  
-    * 陰影図_地理院DEM10／同DEM5  
-    * 立体図・地質・地形等フォルダ→日本CS立体図
+--
+
+### 2. 縄文・弥生集落遺跡データベース  
+* [国立歴史民俗博物館](https://www.rekihaku.ac.jp/up-cgi/login.pl?p=param/jomo/db_param)  
+    * 「[ひなたGIS](https://hgis.pref.miyazaki.lg.jp/)」に収録されています  
+    * 東京都のデータを[Googleスプレッドシート](https://docs.google.com/spreadsheets/d/1HyqVvwygL5keQWXzetahNST33-t_nw9gJpTtsz9Z3fE/edit?usp=sharing)に読み込みました  
+
+---
+###### 4
+### 3. 遺跡発掘調査報告書放射性炭素年代測定データベース  
+* [国立歴史民俗博物館](https://www.rekihaku.ac.jp/up-cgi/login.pl?p=param/esrd/db_param)  
+    * 東京都のデータを[Googleスプレッドシート](https://docs.google.com/spreadsheets/d/1HyqVvwygL5keQWXzetahNST33-t_nw9gJpTtsz9Z3fE/edit?usp=sharing)に読み込みました  
+
+--
+
+### 4. その他のデータベース  
+* [古代地方官衙遺跡データベース](http://mokuren.nabunken.go.jp/NCPstr/NCPstr.htm)  
+* [古代寺院遺跡データベース](http://mokuren.nabunken.go.jp/NCPstjiin/NCPstrJ.htm)  
+* [全国木簡出土遺跡・報告書データベース](http://mokuren.nabunken.go.jp/NCPMKR/Mkn-Iseki.html)  
 
 ---
 ###### 3
