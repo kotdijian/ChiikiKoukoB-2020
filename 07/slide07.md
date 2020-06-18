@@ -29,7 +29,23 @@ layout: false
 
 --
 
-* [Googleドキュメント](https://docs.google.com/document/d/1oKuKq1ya3_haq1b_rWcXnt-aUsBETPwofgmWjbTWX_c/edit?usp=sharing)  
+* [Googleドキュメント](https://docs.google.com/document/d/1oKuKq1ya3_haq1b_rWcXnt-aUsBETPwofgmWjbTWX_c/edit?usp=sharing)
+
+--
+
+## その前に...地図化・空間分析について  
+* ひなたGISでヒートマップ：個別遺跡位置の点表示ではなく分布密度を可視化
+  * [縄文](https://bit.ly/2zHViCT)と[弥生](https://bit.ly/2zHViCT)で比較  
+  * [古墳](https://bit.ly/3hN2TS7)と[奈良・平安](https://bit.ly/2zHViCT)で比較  
+  
+--
+
+* ひなたGISでバッファー：個別遺跡を中心とした範囲を表示
+
+--
+
+* 各時代の分布中心とその変遷
+
 ---
 ###### 3
 ### 1. 日本列島の旧石器時代遺跡データベース  
@@ -54,8 +70,15 @@ layout: false
 
 ### 4. その他のデータベース  
 * [古代地方官衙遺跡データベース](http://mokuren.nabunken.go.jp/NCPstr/NCPstr.htm)  
+--
 * [古代寺院遺跡データベース](http://mokuren.nabunken.go.jp/NCPstjiin/NCPstrJ.htm)  
+--
 * [全国木簡出土遺跡・報告書データベース](http://mokuren.nabunken.go.jp/NCPMKR/Mkn-Iseki.html)  
+
+--
+
+## これらは位置座標を与える／位置座標と連結することで地図化できる
+** ☞ 既存の／自分自身の集成データを地図化することも同じ方法で可能  
 
 ---
 ###### 3
