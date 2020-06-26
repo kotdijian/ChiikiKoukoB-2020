@@ -66,9 +66,13 @@ layout: false
 
 ### 4. その他のデータベース  
 * [古代地方官衙遺跡データベース](http://mokuren.nabunken.go.jp/NCPstr/NCPstr.htm)  
+
 --
+
 * [古代寺院遺跡データベース](http://mokuren.nabunken.go.jp/NCPstjiin/NCPstrJ.htm)  
+
 --
+
 * [全国木簡出土遺跡・報告書データベース](http://mokuren.nabunken.go.jp/NCPMKR/Mkn-Iseki.html)  
 
 --
@@ -121,7 +125,7 @@ layout: false
 --
 * 上流部1＝昭島市～東青梅付近
 
-* 上流部2＝東青梅～源流部（[参考1](https://bit.ly/2N759W6)([参考2](https://bit.ly/3hHl8s4))
+* 上流部2＝東青梅～源流部（[参考1](https://bit.ly/2N759W6))([参考2](https://bit.ly/3hHl8s4))
 
     * 渓谷、河床は岩盤+礫質、谷幅が狭く河原はわずか、河岸との比高大、河床標高は95～＞500m  
 
