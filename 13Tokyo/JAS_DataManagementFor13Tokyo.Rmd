@@ -75,7 +75,7 @@ LabelTemplate = import("ListLabel_template.csv", encoding = "UTF-8")
 日本語等マルチバイト文字のエンコーディングは環境・ソフトごとに異なる。TXT,CSVファイルのエンコードを確認し、読み込み時に指定する必要があります(→chunk3)。
 
 ```{r chunk3, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-guess_encoding("13112_Setagaya-ku09.csv") # ""内に確認するファイル名を入力
+guess_encoding("13106_Taito-ku.csv") # ""内に確認するファイル名を入力
 
 ```
 
@@ -84,7 +84,7 @@ guess_encoding("13112_Setagaya-ku09.csv") # ""内に確認するファイル名�
 ローカルリポジトリからCSVファイルを読み込みます。ファイル名は都度指定すること
 
 ```{r chunk4, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-site.n <- import("13112_Setagaya-ku09.csv", setclass= "tbl_df", encoding ="UTF-8")
+site.n <- import("13106_Taito-ku.csv", setclass= "tbl_df", encoding ="UTF-8")
   # site.nにBBB.csvをテーブルとして(setclass = "tbl_df")読み込み
   # site.n = 読み込み先のオブジェクト名(作業用)
   # BBB = 読み込み元のファイル名(ローカルリポジトリ内なのでファイル名のみ)
@@ -131,7 +131,7 @@ colnames(site.n) #確認用
 ## _coord.csv読み込みと確認
 ローカルリポジトリから位置座標のCSVファイルを読み込みます。経度・緯度のデータの型=<dbl>と書式を確認すること。
 ```{r chunk7, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-site.coord <- import("13112_Setagaya-ku09_coord.csv", setclass= "tbl_df", encoding ="UTF-8")
+site.coord <- import("13106_Taito-ku_coord.csv", setclass= "tbl_df", encoding ="UTF-8")
   # site.coordにBBB_coord.csvをテーブルとして(setclass = "tbl_df")読み込み
   # site.coord = 読み込み先のオブジェクト名(作業用)
   # BBB_coord = 読み込み元のファイル名(ローカルリポジトリ内なのでファイル名のみ)
@@ -240,7 +240,7 @@ head(site.subtotal)
 ひなたGISで位置情報を取得した後で.csv保存したファイルを処理する場合
 
 ```{r chunk13, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-site.subtotal <- import("13112_Setagaya-ku09.csv", setclass= "tbl_df", encoding ="CP932")
+site.subtotal <- import("13201_Hachioji-shiSJS.csv", setclass = "tbl_df")
   # site.nにBBB.csvをテーブルとして(setclass = "tbl_df")読み込み
   # site.n = 読み込み先のオブジェクト名(作業用)
   # BBB = 読み込み元のファイル名(ローカルリポジトリ内なのでファイル名のみ)
@@ -254,9 +254,9 @@ site.subtotal <- import("13112_Setagaya-ku09.csv", setclass= "tbl_df", encoding 
   LabelList #取得結果を表示
 
 # 項目が過不足のチェック→過不足があればファイルを修正
-  if (length(LabelList) > length(LabelTemplate)){
+  if (length(LabelList) > (length(LabelTemplate) + 2)){
     print("多い")
-    } else if (length(LabelList) < length(LabelTemplate)){
+    } else if (length(LabelList) < (length(LabelTemplate) + 2)){
       print("不足")
       } else {
         print("OK")
@@ -547,16 +547,20 @@ if (exists("site.total.age") ==FALSE) {
   # 列名整理
 site.total2 <- rename(site.total, "遺構" = "主な遺構/概要")
 
+  # 時代追加
+site.totage <- dplyr::select(site.total.age,-自治体コード, -遺跡名, -緯度, -経度)
+site.total2 <- left_join(site.total2, site.totage, by = "JASID")
+
   # ベースリスト
 site.sp <- dplyr::select(site.st,自治体コード,区市町村名)
 
   # 縄文貝塚
     #リスト
-      site.Jkaizuka <- site.total %>% 
+      site.Jkaizuka <- site.total2 %>% 
         filter(縄文時代 == 1) %>% 
         filter(str_detect(種別, "貝塚"))
     #集計
-      site.st2 <- site.total %>%
+      site.st2 <- site.total2 %>%
         filter(str_detect(種別, "貝塚")) %>% 
         group_by(自治体コード)　%>%
         tally %>% 
@@ -565,7 +569,7 @@ site.sp <- dplyr::select(site.st,自治体コード,区市町村名)
   
   # 方形周溝墓
     #リスト
-      site.Yshukoubo <- site.total %>% 
+      site.Yshukoubo <- site.total2 %>% 
         filter(弥生時代 == 1) %>% 
         filter(str_detect(遺構, "方形周溝墓"))
     #集計
@@ -578,11 +582,11 @@ site.sp <- dplyr::select(site.st,自治体コード,区市町村名)
   
   # 古墳
     #リスト
-      site.Kkofun <- site.total %>% 
+      site.Kkofun <- site.total2 %>% 
         filter(古墳時代 == 1) %>% 
         filter(str_detect(種別, "古墳"))
     #集計
-      site.st2 <- site.total %>% 
+      site.st2 <- site.total2 %>% 
         filter(str_detect(種別,"古墳")) %>% 
         group_by(自治体コード) %>% 
         tally %>% 
@@ -591,11 +595,11 @@ site.sp <- dplyr::select(site.st,自治体コード,区市町村名)
   
   # 横穴墓
     #リスト
-      site.Kyokoana <- site.total %>% 
+      site.Kyokoana <- site.total2 %>% 
         filter(古墳時代 == 1) %>% 
         filter(str_detect(種別, "横穴墓"))
     #集計
-      site.st2 <- site.total %>% 
+      site.st2 <- site.total2 %>% 
         filter(str_detect(種別,"横穴墓")) %>% 
         group_by(自治体コード) %>% 
         tally %>% 
@@ -604,10 +608,10 @@ site.sp <- dplyr::select(site.st,自治体コード,区市町村名)
   
   # 社寺
     #リスト
-      site.temple <- site.total %>% 
+      site.temple <- site.total2 %>% 
         filter(str_detect(種別, "社寺"))
     #集計
-      site.st2 <- site.total %>% 
+      site.st2 <- site.total2 %>% 
         filter(str_detect(種別,"社寺")) %>% 
         group_by(自治体コード) %>% 
         tally %>% 
@@ -616,11 +620,11 @@ site.sp <- dplyr::select(site.st,自治体コード,区市町村名)
   
   # 城跡
     #リスト
-      site.Mjokan <- site.total %>% 
+      site.Mjokan <- site.total2 %>% 
         filter(中世 == 1) %>% 
         filter(str_detect(種別, "城館"))
     #集計
-      site.st2 <- site.total %>% 
+      site.st2 <- site.total2 %>% 
         filter(中世 ==1) %>% 
         filter(str_detect(種別,"城館")) %>% 
         group_by(自治体コード) %>% 
@@ -630,10 +634,10 @@ site.sp <- dplyr::select(site.st,自治体コード,区市町村名)
   
   # 塚
     #リスト
-      site.Mjokan <- site.total %>% 
+      site.Mtsuka <- site.total2 %>% 
         filter(str_detect(種別, "塚"))
     #集計
-      site.st2 <- site.total %>% 
+      site.st2 <- site.total2 %>% 
         filter(str_detect(種別,"塚")) %>% 
         group_by(自治体コード) %>% 
         tally %>% 
