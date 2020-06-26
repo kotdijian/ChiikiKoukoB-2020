@@ -1,0 +1,44 @@
+---
+title: "JAS_DataModifyingToEnglish"
+author: "kotdijian"
+date: "2020/6/14"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+Sys.setlocale("LC_ALL","English")
+```
+
+```{r}
+if(!require("tidyverse")) install.packages('tidyverse', repos='http://cran.us.r-project.org') 
+if(!require("rio")) install.packages('rio', repos='http://cran.us.r-project.org')  
+if(!require("formattable")) install.packages('formattable', repos='http://cran.us.r-project.org')  
+if(!require("utf8")) install.packages("utf8", repos='http://cran.us.r-project.org')
+if(!require("bit64")) install.packages("bit64", repos='http://cran.us.r-project.org')
+
+#パッケージのアクティベート
+library("tidyverse")
+library("rio")
+library("formattable")
+library("utf8")
+library("bit64")
+```
+
+```{r import data}
+site.totalEn <- dplyr::select(import("https://github.com/kotdijian/ChiikiKoukoB-2020/raw/master/13Tokyo/13Tokyo_total.csv",  setclass = "tbl_df", encoding = "UTF-8"), JASID, 自治体コード, 遺跡番号, 緯度, 経度)
+
+site.total.ageEn <- dplyr::select(import("https://github.com/kotdijian/ChiikiKoukoB-2020/raw/master/13Tokyo/13Tokyo_totalAge.csv", setclass = "tbl_df", encoding = "UTF-8"), -自治体コード, -遺跡名, -緯度, -経度)
+
+site.totalEn <- inner_join(site.totalEn, site.total.ageEn, by = "JASID")
+rm(site.total.ageEn)
+
+site.totalEn <- rename(site.totalEn, "LGC" = "自治体コード", "siteID" = "遺跡番号", "longitude" = "経度", "latitude" = "緯度","palaeolithic" = "旧石器時代", "jomon" = "縄文時代", "yayoi" = "弥生時代", "kofun" = "古墳時代", "nara" = "奈良時代", "heian" = "平安時代", "medieval" = "中世", "earlymodern" = "近世", "unknown" = "時代不明")
+
+write.csv(site.totalEn, "13Tokyo_totalEn.csv",row.names = FALSE, fileEncoding = "UTF-8")
+```
+
+```{r }
+
+```
+
