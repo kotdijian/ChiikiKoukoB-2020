@@ -13,23 +13,41 @@ layout: false
 ###### 1
 ### 前回の振り返り
 * 各自で作成した主題図([第7回まとめ](https://docs.google.com/document/d/1oKuKq1ya3_haq1b_rWcXnt-aUsBETPwofgmWjbTWX_c/edit?usp=sharing))  
-![:scale40%](https://4.bp.blogspot.com/-dXKjAdGmo10/U0pTNYWxy9I/AAAAAAAAfGE/4FCH7Y30awk/s800/grade1_taihenyoku.png)  
+![:scale 40%](https://4.bp.blogspot.com/-dXKjAdGmo10/U0pTNYWxy9I/AAAAAAAAfGE/4FCH7Y30awk/s800/grade1_taihenyoku.png)  
 --
 
-### 事後学習課題
-* 各自でテーマを決めて主題図を作成する  
-* 作成した主題図から読み取れたことをまとめる   
-    * [まとめた内容はこちらから](https://docs.google.com/document/d/1oKuKq1ya3_haq1b_rWcXnt-aUsBETPwofgmWjbTWX_c/edit?usp=sharing)  
+* その後提出された課題も見ていきましょう  
 
 ---
 ###### 2
-### 本日の実習：さまざまな考古学データベースを探してみよう  
+### 見つけ出したものは何ですか?　地域への視点  
+
+## 第2回を主出してみよう  
 
 --
 
-* [Googleドキュメント](https://docs.google.com/document/d/1oKuKq1ya3_haq1b_rWcXnt-aUsBETPwofgmWjbTWX_c/edit?usp=sharing)
+* 「地域」の構成要素：**地形・地理・地質・気象・水文・生態系・人類・文化**    
+* 地域区分の示標    
+    
+    - **個別地域**：固有性・特定の「場所」
+    - **類型地域**：ある示標・特徴により抽出した範囲    
+    - **等質地域**：同じ特徴でまとめられる範囲
+    - **機能地域**：性格の異なる空間が機能的に結びついた範囲    
+    - **認知地域**：人間の主観によりまとめられる範囲    
+
+---
+###### 3
+### どのように見ていますか?　地域を記述するアプローチの違い  
 
 --
+
+* **記述的研究**：しばしば特徴的・代表的な事例によって説明する  
+
+--
+
+* **定量的研究**：数値等の基準により集合的・全体的に説明する  
+
+---
 
 ## その前に...地図化・空間分析について  
 * ひなたGISでヒートマップ：個別遺跡位置の点表示ではなく分布密度を可視化
