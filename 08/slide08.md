@@ -4,18 +4,16 @@ class: center, middle, inverse
 
 ---
 # 考古学における地域研究 
-地域考古学B-2020年度第7回目
-2020/6/19
+地域考古学B-2020年度第8回目
+2020/6/26
 [授業ページトップに戻る](https://kotdijian.github.io/ChiikiKoukoB-2020/)
 
 ---
 layout: false
 ###### 1
 ### 前回の振り返り
-* 地図作成のさまざまな方法を確認した  
-    * ひなたGIS  
-    * 地理院地図  
-    * GoogleEarth  
+* 各自で作成した主題図([第7回まとめ](https://docs.google.com/document/d/1oKuKq1ya3_haq1b_rWcXnt-aUsBETPwofgmWjbTWX_c/edit?usp=sharing))  
+![](https://4.bp.blogspot.com/-dXKjAdGmo10/U0pTNYWxy9I/AAAAAAAAfGE/4FCH7Y30awk/s800/grade1_taihenyoku.png)  
 --
 
 ### 事後学習課題
