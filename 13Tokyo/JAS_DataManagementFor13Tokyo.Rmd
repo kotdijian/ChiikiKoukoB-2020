@@ -938,3 +938,10 @@ site.ttt <- site.total2 %>%
               mutate(色 = "lightblue")
 write.csv(site.ttt,"13Tokyo_Tamagawa_earlymodern.csv", row.names = FALSE, fileEncoding = "CP932")
 ```
+
+```{r}
+#多摩川水系抽出
+site.tamagawa.total <- filter(site.total2,自治体コード)
+
+```
+
