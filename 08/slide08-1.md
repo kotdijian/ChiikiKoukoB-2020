@@ -12,8 +12,10 @@ class: center, middle, inverse
 layout: false
 ###### 1
 ### 前回の振り返り
-* 各自で作成した主題図([第7回まとめ](https://docs.google.com/document/d/1oKuKq1ya3_haq1b_rWcXnt-aUsBETPwofgmWjbTWX_c/edit?usp=sharing))  
 background-image: url(https://4.bp.blogspot.com/-dXKjAdGmo10/U0pTNYWxy9I/AAAAAAAAfGE/4FCH7Y30awk/s800/grade1_taihenyoku.png)  
+
+* 各自で作成した主題図([第7回まとめ](https://docs.google.com/document/d/1oKuKq1ya3_haq1b_rWcXnt-aUsBETPwofgmWjbTWX_c/edit?usp=sharing))  
+
 --
 
 * その後提出された課題も見ていきましょう  
@@ -22,7 +24,7 @@ background-image: url(https://4.bp.blogspot.com/-dXKjAdGmo10/U0pTNYWxy9I/AAAAAAA
 ###### 2
 ### 見つけ出したものは何ですか?　地域への視点  
 
-## 第2回を主出してみよう  
+## 第2回を思い出してみよう  
 
 --
 
@@ -42,12 +44,22 @@ background-image: url(https://4.bp.blogspot.com/-dXKjAdGmo10/U0pTNYWxy9I/AAAAAAA
 --
 
 * **記述的研究**：しばしば特徴的・代表的な事例によって説明する  
-
+    * [定性的研究](https://ja.wikipedia.org/wiki/%E5%AE%9A%E6%80%A7%E7%9A%84%E7%A0%94%E7%A9%B6)・質的研究とも  
 --
 
 * **定量的研究**：数値等の基準により集合的・全体的に説明する  
+    * 日本語版ウィキペディア「[定量的研究](https://ja.wikipedia.org/wiki/%E5%AE%9A%E9%87%8F%E7%9A%84%E7%A0%94%E7%A9%B6)」  
+    * 池田光穂(大阪大学・医療人類学)「[質的研究と量的研究のちがい](https://www.cscd.osaka-u.ac.jp/user/rosaldo/150321Qapr.html)」
+
+    > 質的アプローチと量的アプローチは車の両輪    
 
 ---
+###### 4
+### 地図化は記述的か定量的か?  
+* 空間的な定量性を視覚化する  
+    * 位置、配置、量、密度、距離...  
+    * 他の地物・事象との位置あkん系関係...  
+    
 
 ## その前に...地図化・空間分析について  
 * ひなたGISでヒートマップ：個別遺跡位置の点表示ではなく分布密度を可視化
