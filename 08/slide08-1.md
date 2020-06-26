@@ -45,6 +45,7 @@ background-image: url(https://4.bp.blogspot.com/-dXKjAdGmo10/U0pTNYWxy9I/AAAAAAA
 
 * **記述的研究**：しばしば特徴的・代表的な事例によって説明する  
     * [定性的研究](https://ja.wikipedia.org/wiki/%E5%AE%9A%E6%80%A7%E7%9A%84%E7%A0%94%E7%A9%B6)・質的研究とも  
+    
 --
 
 * **定量的研究**：数値等の基準により集合的・全体的に説明する  
@@ -56,104 +57,106 @@ background-image: url(https://4.bp.blogspot.com/-dXKjAdGmo10/U0pTNYWxy9I/AAAAAAA
 ---
 ###### 4
 ### 地図化は記述的か定量的か?  
+
+--
+
 * 空間的な定量性を視覚化する  
     * 位置、配置、量、密度、距離...  
-    * 他の地物・事象との位置あkん系関係...  
+    * 他の地物・事象との位置関係...  
     
-
-## その前に...地図化・空間分析について  
-* ひなたGISでヒートマップ：個別遺跡位置の点表示ではなく分布密度を可視化
-  * [縄文](https://bit.ly/2zHViCT)と[弥生](https://bit.ly/2zHViCT)で比較  
-  * [古墳](https://bit.ly/3hN2TS7)と[奈良・平安](https://bit.ly/2zHViCT)で比較  
-  
 --
 
-* 各時代の分布中心とその変遷
+* 点表示とヒートマップ(分布密度表示)  
 
----
-###### 3
-### 1. 日本列島の旧石器時代遺跡データベース  
-* [日本旧石器学会](http://palaeolithic.jp/data/index.htm)
-    * 「[ひなたGIS](https://hgis.pref.miyazaki.lg.jp/)」に収録されています  
-    * 東京都のデータを[Googleスプレッドシート](https://docs.google.com/spreadsheets/d/1HyqVvwygL5keQWXzetahNST33-t_nw9gJpTtsz9Z3fE/edit?usp=sharing)に読み込みました  
+    * [多摩川流域onひなたGIS](https://hgis.pref.miyazaki.lg.jp/hinata/hinata.html#11/35.703688/139.463517&l=%5B%5B%7B%22n%22:%22hillshade5%22,%22o%22:1,%22z%22:134%7D,%7B%22n%22:%22kawaryuuiki%22,%22o%22:1,%22z%22:136%7D%5D,%5B%7B%22n%22:%22pale%22,%22o%22:1,%22z%22:134%7D%5D%5D&uid=51ad35f0527c64b7d871d431465ec27d)  
+    * データセットを更新しました[Googleスプレッドシート](https://docs.google.com/spreadsheets/d/137n6Iev44TZi8Hmkn-2DK9luBUe12DI3TJWdZuFtjlA/edit?usp=sharing)  
 
 --
 
-### 2. 縄文・弥生集落遺跡データベース  
-* [国立歴史民俗博物館](https://www.rekihaku.ac.jp/up-cgi/login.pl?p=param/jomo/db_param)  
-    * 「[ひなたGIS](https://hgis.pref.miyazaki.lg.jp/)」に収録されています  
-    * 東京都のデータを[Googleスプレッドシート](https://docs.google.com/spreadsheets/d/1HyqVvwygL5keQWXzetahNST33-t_nw9gJpTtsz9Z3fE/edit?usp=sharing)に読み込みました  
-
----
-###### 4
-### 3. 遺跡発掘調査報告書放射性炭素年代測定データベース  
-* [国立歴史民俗博物館](https://www.rekihaku.ac.jp/up-cgi/login.pl?p=param/esrd/db_param)  
-    * 東京都のデータを[Googleスプレッドシート](https://docs.google.com/spreadsheets/d/1HyqVvwygL5keQWXzetahNST33-t_nw9gJpTtsz9Z3fE/edit?usp=sharing)に読み込みました  
-
---
-
-### 4. その他のデータベース  
-* [古代地方官衙遺跡データベース](http://mokuren.nabunken.go.jp/NCPstr/NCPstr.htm)  
---
-* [古代寺院遺跡データベース](http://mokuren.nabunken.go.jp/NCPstjiin/NCPstrJ.htm)  
---
-* [全国木簡出土遺跡・報告書データベース](http://mokuren.nabunken.go.jp/NCPMKR/Mkn-Iseki.html)  
-
---
-
-## これらは位置座標を与える／位置座標と連結することで地図化できる
-**☞ 既存の／自分自身の集成データを地図化することも同じ方法で可能**  
+* 個別の位置（より記述的）か、密度・パターン（より定量的）か?
 
 ---
 ###### 5
-## 武蔵野台地の考古学
-### マクロスケールでの地形のなりたちと遺跡分布の関係  
+### 空間分析の定量的手法
 
-* 武蔵野台地の地形発達史  
+* k-means法：対象の分布をk個のクラスターに分割する方法  
+    * [参考](http://tech.nitoyon.com/ja/blog/2009/04/09/kmeans-visualise/)  
 
---
+* カーネル密度推定:統計的に確率密度関数を推定する方法  
+    * ヒートマップ  
 
-* 海水準変動と段丘の形成
-  ☞ 地球規模の寒冷化＝氷河期 → 海水準が低下 → 河川勾配が大きくなる → 下刻  
-
---
-
-* 一般的な河川地形
-  * 下流部＝曲流平野（蛇行流路+三日月湖）→ 土砂の堆積的環境  
---
-
-  * 中流部＝網状流路 → 土砂の堆積／浸食の繰り返し  
---
-
-  * 上流部＝渓谷（深い谷） → 浸食環境  
-  
---
-
-### 多摩川の場合、どこからどこまで?  
-
+* ボロノイ分割：各点間を均等に分割する方法  
+    * [日本語版ウィキペディア「[ボロノイ図](https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%AD%E3%83%8E%E3%82%A4%E5%9B%B3)」  
+    
+* AAN(平均再近隣距離分析):分布が「分散」「ランダム」「クラスター」かを検証する  
+    * [参考](https://desktop.arcgis.com/ja/arcmap/10.3/tools/spatial-statistics-toolbox/average-nearest-neighbor.htm)  
+    
 ---
 ###### 6
-### マクロスケールでの地形のなりたちと遺跡分布の関係  
-* 多摩川の河床地形を地形分類図で確認しよう（[地理院地図](https://bit.ly/3hBsYDv))  
+### 空間分析の定量的手法
 
-* 下流部＝河口～狛江市・調布市付近
+* 要約した数値示標([前回参照](https://desktop.arcgis.com/ja/arcmap/10.3/tools/spatial-statistics-toolbox/average-nearest-neighbor.htm))
+    * 各時代の分布中心  
+    * 存続期間  
+    * 単位面積(区市町村、その他の面積)あたりの密度
 
-    * 曲流平野、河床は砂泥質、河床標高は0～15m
-
---
-
-* 中流部＝調布市～昭島市付近
-
-    * 網状流路、河床は礫質、起伏大、河床標高は15～95m
-
---
-* 上流部1＝昭島市～東青梅付近
-
-* 上流部2＝東青梅～源流部（[参考1](https://bit.ly/2N759W6)([参考2](https://bit.ly/3hHl8s4))
-
-    * 渓谷、河床は岩盤+礫質、谷幅が狭く河原はわずか、河岸との比高大、河床標高は95～＞500m  
+* 同上:地図化  
 
 ---
 ###### 7
-## それでは、遺跡分布の動向とその背景を考えてみましょう  
+### スケールをどのように定めるか? 時間軸と空間的広がり  
+
+* 農耕開始～定着期の遺跡分布の変化  
+
+--
+
+* 縄文時代後期～古墳時代の通時的な変化  
+
+--
+
+* 全遺跡と、墓(墳墓)の分布  
+
+--
+
+* 特定範囲の遺跡分布の状況  
+  * 地形分類図と遺跡分布から読み取れること  
+
+---
+###### 8
+### さらなる地理情報との重ね合わせ
+
+* 歴史的な農業環境・水利水文環境  
+  * 明治迅速図:19世紀末の土地利用や水利([歴史的農業環境閲覧システム](https://habs.dc.affrc.go.jp/index.html))  
+  
+  * 江戸時代地誌:例)『武藏田園簿』『新編武蔵風土記稿』、各地域の石高帖など  
+  
+  * [江戸後期 武蔵・相模国 尊名マップ](https://fudoki.midoriit.com/)  
+
+--
+
+* 『武藏田園簿』の田方・畑方比率を地図化してみる  
+
+--
+
+* 明治迅速図や考古遺跡の分布と比較してみる  
+
+--
+
+* 「野川流域」のイメージと実像は?  
+
+--
+
+* より高度な分析のために...
+
+---
+###### 9
+### 詳細な考古学遺跡情報を調べるには  
+
+* 東京都遺跡地図データの欠点・難しさは何ですか?  
+
+* 集計・要約されたデータの原典・ソースにあたりましょう  
+
+## [全国遺跡報告総覧](https://sitereports.nabunken.go.jp/ja)
+
+
 
