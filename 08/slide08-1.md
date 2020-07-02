@@ -12,7 +12,7 @@ class: center, middle, inverse
 layout: false
 ###### 1
 ### 前回の振り返り
-background-image: url(https://4.bp.blogspot.com/-dXKjAdGmo10/U0pTNYWxy9I/AAAAAAAAfGE/4FCH7Y30awk/s800/grade1_taihenyoku.png)  
+background-image: url(https://www.sozailab.jp/db_img/sozai/45811/thumb_90224f097a4aed286aafcf677622b27c.jpg)  
 
 * 各自で作成した主題図([第7回まとめ](https://docs.google.com/document/d/1oKuKq1ya3_haq1b_rWcXnt-aUsBETPwofgmWjbTWX_c/edit?usp=sharing))  
 
