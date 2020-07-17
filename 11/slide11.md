@@ -125,11 +125,26 @@ layout: false
 --
 
 【余談】多摩川低地における神社の移転  
-  * 谷保天満宮の場合  
+* 谷保天満宮の場合  
+
+  * [現在地](https://bit.ly/3eG45Ud) : 府中崖線端、湧水点付近 ⇔ [発祥地](https://bit.ly/3jb1Xrg) : 多摩川低地、洪水により移転との伝承  
 
 --
   
-  * 小野一之宮神社の場合  
+* 小野一之宮神社の場合  
+
+  * [府中市住吉町](https://bit.ly/2WqpkmO) : 多摩川左岸、低地 ⇔ [多摩市一の宮](https://bit.ly/394P79e) : 多摩川右岸、低地  
+
+--
+
+* 多摩川両岸に残る同じ地名  
+
+  * 川崎市中原区[上丸子](https://bit.ly/2CDWbxw) ⇔ 大田区[下丸子](https://bit.ly/2DHq2pd)  
+  
+  * 川崎市高津区[下野毛](https://bit.ly/2WrYBWS) ⇔ 世田谷区[野毛](https://bit.ly/3h7bBJt)  
+  
+  * 稲城市[押立](https://bit.ly/3fF7BQb) ⇔ 府中市[押立町](https://bit.ly/2ZAKLUb)  
+
 
 ---
 ###### 5
